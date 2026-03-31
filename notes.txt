@@ -1,1 +1,15 @@
+Project title: The impact health disparaties have on colorectal cancer diagnosis
+
+Motivation: It is known that colorectal cancer is on the rise, and that there are major health disparaties amongst different economic groups in this country. We are interested in the intersection between disparaties such as the lack of access to unprocessed foods, affordable healthcare, and rate of colorectal cancer diagnoses. 
+
+Research questions:
+1. 
+2.
+3.
+4.
+5.
+(6,7)
+
+Source of the datasets:
 https://www.kaggle.com/datasets/ankushpanday2/colorectal-cancer-global-dataset-and-predictions
+- 28 columns, 
