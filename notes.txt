@@ -12,4 +12,4 @@ Research questions:
 
 Source of the datasets:
 https://www.kaggle.com/datasets/ankushpanday2/colorectal-cancer-global-dataset-and-predictions
-- 28 columns, 
+- 28 columns, 167,497 rows
