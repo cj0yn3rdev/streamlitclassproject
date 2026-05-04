@@ -1,0 +1,1059 @@
+year,geography_level,state,cancer_type,sex,metric,value
+2015,state,Alabama,colon_rectum,All,cases,2150
+2015,state,Alabama,colon_rectum,All,deaths,930
+2015,state,Alaska,colon_rectum,All,cases,290
+2015,state,Alaska,colon_rectum,All,deaths,90
+2015,state,Arizona,colon_rectum,All,cases,2440
+2015,state,Arizona,colon_rectum,All,deaths,990
+2015,state,Arkansas,colon_rectum,All,cases,1420
+2015,state,Arkansas,colon_rectum,All,deaths,620
+2015,state,California,colon_rectum,All,cases,14510
+2015,state,California,colon_rectum,All,deaths,5180
+2015,state,Colorado,colon_rectum,All,cases,1800
+2015,state,Colorado,colon_rectum,All,deaths,650
+2015,state,Connecticut,colon_rectum,All,cases,1580
+2015,state,Connecticut,colon_rectum,All,deaths,440
+2015,state,Delaware,colon_rectum,All,cases,400
+2015,state,Delaware,colon_rectum,All,deaths,150
+2015,state,District of Columbia,colon_rectum,All,cases,230
+2015,state,District of Columbia,colon_rectum,All,deaths,100
+2015,state,Florida,colon_rectum,All,cases,9330
+2015,state,Florida,colon_rectum,All,deaths,3520
+2015,state,Georgia,colon_rectum,All,cases,3820
+2015,state,Georgia,colon_rectum,All,deaths,1500
+2015,state,Hawaii,colon_rectum,All,cases,720
+2015,state,Hawaii,colon_rectum,All,deaths,230
+2015,state,Idaho,colon_rectum,All,cases,620
+2015,state,Idaho,colon_rectum,All,deaths,220
+2015,state,Illinois,colon_rectum,All,cases,5720
+2015,state,Illinois,colon_rectum,All,deaths,2090
+2015,state,Indiana,colon_rectum,All,cases,2890
+2015,state,Indiana,colon_rectum,All,deaths,1080
+2015,state,Iowa,colon_rectum,All,cases,1490
+2015,state,Iowa,colon_rectum,All,deaths,570
+2015,state,Kansas,colon_rectum,All,cases,1080
+2015,state,Kansas,colon_rectum,All,deaths,480
+2015,state,Kentucky,colon_rectum,All,cases,2090
+2015,state,Kentucky,colon_rectum,All,deaths,850
+2015,state,Louisiana,colon_rectum,All,cases,2150
+2015,state,Louisiana,colon_rectum,All,deaths,810
+2015,state,Maine,colon_rectum,All,cases,610
+2015,state,Maine,colon_rectum,All,deaths,240
+2015,state,Maryland,colon_rectum,All,cases,2360
+2015,state,Maryland,colon_rectum,All,deaths,860
+2015,state,Massachusetts,colon_rectum,All,cases,2550
+2015,state,Massachusetts,colon_rectum,All,deaths,930
+2015,state,Michigan,colon_rectum,All,cases,4190
+2015,state,Michigan,colon_rectum,All,deaths,1670
+2015,state,Minnesota,colon_rectum,All,cases,2140
+2015,state,Minnesota,colon_rectum,All,deaths,760
+2015,state,Mississippi,colon_rectum,All,cases,1460
+2015,state,Mississippi,colon_rectum,All,deaths,640
+2015,state,Missouri,colon_rectum,All,cases,2840
+2015,state,Missouri,colon_rectum,All,deaths,1050
+2015,state,Montana,colon_rectum,All,cases,500
+2015,state,Montana,colon_rectum,All,deaths,170
+2015,state,Nebraska,colon_rectum,All,cases,850
+2015,state,Nebraska,colon_rectum,All,deaths,340
+2015,state,Nevada,colon_rectum,All,cases,1110
+2015,state,Nevada,colon_rectum,All,deaths,470
+2015,state,New Hampshire,colon_rectum,All,cases,540
+2015,state,New Hampshire,colon_rectum,All,deaths,200
+2015,state,New Jersey,colon_rectum,All,cases,4260
+2015,state,New Jersey,colon_rectum,All,deaths,1480
+2015,state,New Mexico,colon_rectum,All,cases,820
+2015,state,New Mexico,colon_rectum,All,deaths,350
+2015,state,New York,colon_rectum,All,cases,8010
+2015,state,New York,colon_rectum,All,deaths,2890
+2015,state,North Carolina,colon_rectum,All,cases,3980
+2015,state,North Carolina,colon_rectum,All,deaths,1490
+2015,state,North Dakota,colon_rectum,All,cases,350
+2015,state,North Dakota,colon_rectum,All,deaths,130
+2015,state,Ohio,colon_rectum,All,cases,5430
+2015,state,Ohio,colon_rectum,All,deaths,2090
+2015,state,Oklahoma,colon_rectum,All,cases,1690
+2015,state,Oklahoma,colon_rectum,All,deaths,680
+2015,state,Oregon,colon_rectum,All,cases,1510
+2015,state,Oregon,colon_rectum,All,deaths,670
+2015,state,Pennsylvania,colon_rectum,All,cases,6300
+2015,state,Pennsylvania,colon_rectum,All,deaths,2400
+2015,state,Rhode Island,colon_rectum,All,cases,470
+2015,state,Rhode Island,colon_rectum,All,deaths,160
+2015,state,South Carolina,colon_rectum,All,cases,2130
+2015,state,South Carolina,colon_rectum,All,deaths,840
+2015,state,South Dakota,colon_rectum,All,cases,360
+2015,state,South Dakota,colon_rectum,All,deaths,140
+2015,state,Tennessee,colon_rectum,All,cases,3060
+2015,state,Tennessee,colon_rectum,All,deaths,1220
+2015,state,Texas,colon_rectum,All,cases,10050
+2015,state,Texas,colon_rectum,All,deaths,3470
+2015,state,US,colon_rectum,All,cases,132700
+2015,state,US,colon_rectum,All,deaths,49700
+2015,state,Utah,colon_rectum,All,cases,670
+2015,state,Utah,colon_rectum,All,deaths,240
+2015,state,Vermont,colon_rectum,All,cases,280
+2015,state,Vermont,colon_rectum,All,deaths,100
+2015,state,Virginia,colon_rectum,All,cases,2970
+2015,state,Virginia,colon_rectum,All,deaths,1180
+2015,state,Washington,colon_rectum,All,cases,2700
+2015,state,Washington,colon_rectum,All,deaths,990
+2015,state,West Virginia,colon_rectum,All,cases,1080
+2015,state,West Virginia,colon_rectum,All,deaths,410
+2015,state,Wisconsin,colon_rectum,All,cases,2460
+2015,state,Wisconsin,colon_rectum,All,deaths,850
+2015,state,Wyoming,colon_rectum,All,cases,230
+2015,state,Wyoming,colon_rectum,All,deaths,80
+2016,state,Alabama,colon_rectum,All,cases,2190
+2016,state,Alabama,colon_rectum,All,deaths,920
+2016,state,Alaska,colon_rectum,All,cases,270
+2016,state,Alaska,colon_rectum,All,deaths,90
+2016,state,Arizona,colon_rectum,All,cases,2550
+2016,state,Arizona,colon_rectum,All,deaths,980
+2016,state,Arkansas,colon_rectum,All,cases,1410
+2016,state,Arkansas,colon_rectum,All,deaths,600
+2016,state,California,colon_rectum,All,cases,13770
+2016,state,California,colon_rectum,All,deaths,5180
+2016,state,Colorado,colon_rectum,All,cases,1790
+2016,state,Colorado,colon_rectum,All,deaths,650
+2016,state,Connecticut,colon_rectum,All,cases,1610
+2016,state,Connecticut,colon_rectum,All,deaths,450
+2016,state,Delaware,colon_rectum,All,cases,430
+2016,state,Delaware,colon_rectum,All,deaths,150
+2016,state,District of Columbia,colon_rectum,All,cases,200
+2016,state,District of Columbia,colon_rectum,All,deaths,90
+2016,state,Florida,colon_rectum,All,cases,9710
+2016,state,Florida,colon_rectum,All,deaths,3500
+2016,state,Georgia,colon_rectum,All,cases,3980
+2016,state,Georgia,colon_rectum,All,deaths,1500
+2016,state,Hawaii,colon_rectum,All,cases,650
+2016,state,Hawaii,colon_rectum,All,deaths,230
+2016,state,Idaho,colon_rectum,All,cases,610
+2016,state,Idaho,colon_rectum,All,deaths,220
+2016,state,Illinois,colon_rectum,All,cases,5580
+2016,state,Illinois,colon_rectum,All,deaths,2030
+2016,state,Indiana,colon_rectum,All,cases,2980
+2016,state,Indiana,colon_rectum,All,deaths,1070
+2016,state,Iowa,colon_rectum,All,cases,1500
+2016,state,Iowa,colon_rectum,All,deaths,570
+2016,state,Kansas,colon_rectum,All,cases,1150
+2016,state,Kansas,colon_rectum,All,deaths,460
+2016,state,Kentucky,colon_rectum,All,cases,2200
+2016,state,Kentucky,colon_rectum,All,deaths,830
+2016,state,Louisiana,colon_rectum,All,cases,2170
+2016,state,Louisiana,colon_rectum,All,deaths,790
+2016,state,Maine,colon_rectum,All,cases,720
+2016,state,Maine,colon_rectum,All,deaths,230
+2016,state,Maryland,colon_rectum,All,cases,2390
+2016,state,Maryland,colon_rectum,All,deaths,850
+2016,state,Massachusetts,colon_rectum,All,cases,2750
+2016,state,Massachusetts,colon_rectum,All,deaths,890
+2016,state,Michigan,colon_rectum,All,cases,4570
+2016,state,Michigan,colon_rectum,All,deaths,1640
+2016,state,Minnesota,colon_rectum,All,cases,2180
+2016,state,Minnesota,colon_rectum,All,deaths,750
+2016,state,Mississippi,colon_rectum,All,cases,1530
+2016,state,Mississippi,colon_rectum,All,deaths,630
+2016,state,Missouri,colon_rectum,All,cases,2850
+2016,state,Missouri,colon_rectum,All,deaths,1050
+2016,state,Montana,colon_rectum,All,cases,460
+2016,state,Montana,colon_rectum,All,deaths,170
+2016,state,Nebraska,colon_rectum,All,cases,850
+2016,state,Nebraska,colon_rectum,All,deaths,330
+2016,state,Nevada,colon_rectum,All,cases,1140
+2016,state,Nevada,colon_rectum,All,deaths,480
+2016,state,New Hampshire,colon_rectum,All,cases,620
+2016,state,New Hampshire,colon_rectum,All,deaths,190
+2016,state,New Jersey,colon_rectum,All,cases,4020
+2016,state,New Jersey,colon_rectum,All,deaths,1450
+2016,state,New Mexico,colon_rectum,All,cases,760
+2016,state,New Mexico,colon_rectum,All,deaths,350
+2016,state,New York,colon_rectum,All,cases,8730
+2016,state,New York,colon_rectum,All,deaths,2830
+2016,state,North Carolina,colon_rectum,All,cases,4280
+2016,state,North Carolina,colon_rectum,All,deaths,1480
+2016,state,North Dakota,colon_rectum,All,cases,310
+2016,state,North Dakota,colon_rectum,All,deaths,120
+2016,state,Ohio,colon_rectum,All,cases,5340
+2016,state,Ohio,colon_rectum,All,deaths,2060
+2016,state,Oklahoma,colon_rectum,All,cases,1630
+2016,state,Oklahoma,colon_rectum,All,deaths,690
+2016,state,Oregon,colon_rectum,All,cases,1610
+2016,state,Oregon,colon_rectum,All,deaths,660
+2016,state,Pennsylvania,colon_rectum,All,cases,6390
+2016,state,Pennsylvania,colon_rectum,All,deaths,2340
+2016,state,Rhode Island,colon_rectum,All,cases,490
+2016,state,Rhode Island,colon_rectum,All,deaths,160
+2016,state,South Carolina,colon_rectum,All,cases,2220
+2016,state,South Carolina,colon_rectum,All,deaths,830
+2016,state,South Dakota,colon_rectum,All,cases,390
+2016,state,South Dakota,colon_rectum,All,deaths,130
+2016,state,Tennessee,colon_rectum,All,cases,3130
+2016,state,Tennessee,colon_rectum,All,deaths,1230
+2016,state,Texas,colon_rectum,All,cases,9680
+2016,state,Texas,colon_rectum,All,deaths,3520
+2016,state,US,colon_rectum,All,cases,134490
+2016,state,US,colon_rectum,All,deaths,49190
+2016,state,Utah,colon_rectum,All,cases,720
+2016,state,Utah,colon_rectum,All,deaths,240
+2016,state,Vermont,colon_rectum,All,cases,280
+2016,state,Vermont,colon_rectum,All,deaths,100
+2016,state,Virginia,colon_rectum,All,cases,3240
+2016,state,Virginia,colon_rectum,All,deaths,1160
+2016,state,Washington,colon_rectum,All,cases,2700
+2016,state,Washington,colon_rectum,All,deaths,970
+2016,state,West Virginia,colon_rectum,All,cases,1010
+2016,state,West Virginia,colon_rectum,All,deaths,400
+2016,state,Wisconsin,colon_rectum,All,cases,2520
+2016,state,Wisconsin,colon_rectum,All,deaths,840
+2016,state,Wyoming,colon_rectum,All,cases,220
+2016,state,Wyoming,colon_rectum,All,deaths,90
+2017,state,Alabama,colon_rectum,All,cases,2210
+2017,state,Alabama,colon_rectum,All,deaths,940
+2017,state,Alaska,colon_rectum,All,cases,280
+2017,state,Alaska,colon_rectum,All,deaths,100
+2017,state,Arizona,colon_rectum,All,cases,2630
+2017,state,Arizona,colon_rectum,All,deaths,1020
+2017,state,Arkansas,colon_rectum,All,cases,1390
+2017,state,Arkansas,colon_rectum,All,deaths,600
+2017,state,California,colon_rectum,All,cases,13890
+2017,state,California,colon_rectum,All,deaths,5240
+2017,state,Colorado,colon_rectum,All,cases,1770
+2017,state,Colorado,colon_rectum,All,deaths,660
+2017,state,Connecticut,colon_rectum,All,cases,1600
+2017,state,Connecticut,colon_rectum,All,deaths,450
+2017,state,Delaware,colon_rectum,All,cases,440
+2017,state,Delaware,colon_rectum,All,deaths,150
+2017,state,District of Columbia,colon_rectum,All,cases,210
+2017,state,District of Columbia,colon_rectum,All,deaths,90
+2017,state,Florida,colon_rectum,All,cases,9930
+2017,state,Florida,colon_rectum,All,deaths,3620
+2017,state,Georgia,colon_rectum,All,cases,4040
+2017,state,Georgia,colon_rectum,All,deaths,1540
+2017,state,Hawaii,colon_rectum,All,cases,660
+2017,state,Hawaii,colon_rectum,All,deaths,240
+2017,state,Idaho,colon_rectum,All,cases,610
+2017,state,Idaho,colon_rectum,All,deaths,250
+2017,state,Illinois,colon_rectum,All,cases,5580
+2017,state,Illinois,colon_rectum,All,deaths,2030
+2017,state,Indiana,colon_rectum,All,cases,3080
+2017,state,Indiana,colon_rectum,All,deaths,1110
+2017,state,Iowa,colon_rectum,All,cases,1510
+2017,state,Iowa,colon_rectum,All,deaths,570
+2017,state,Kansas,colon_rectum,All,cases,1170
+2017,state,Kansas,colon_rectum,All,deaths,470
+2017,state,Kentucky,colon_rectum,All,cases,2250
+2017,state,Kentucky,colon_rectum,All,deaths,830
+2017,state,Louisiana,colon_rectum,All,cases,2150
+2017,state,Louisiana,colon_rectum,All,deaths,830
+2017,state,Maine,colon_rectum,All,cases,710
+2017,state,Maine,colon_rectum,All,deaths,220
+2017,state,Maryland,colon_rectum,All,cases,2430
+2017,state,Maryland,colon_rectum,All,deaths,860
+2017,state,Massachusetts,colon_rectum,All,cases,2760
+2017,state,Massachusetts,colon_rectum,All,deaths,910
+2017,state,Michigan,colon_rectum,All,cases,4660
+2017,state,Michigan,colon_rectum,All,deaths,1680
+2017,state,Minnesota,colon_rectum,All,cases,2170
+2017,state,Minnesota,colon_rectum,All,deaths,760
+2017,state,Mississippi,colon_rectum,All,cases,1520
+2017,state,Mississippi,colon_rectum,All,deaths,650
+2017,state,Missouri,colon_rectum,All,cases,2860
+2017,state,Missouri,colon_rectum,All,deaths,1070
+2017,state,Montana,colon_rectum,All,cases,500
+2017,state,Montana,colon_rectum,All,deaths,170
+2017,state,Nebraska,colon_rectum,All,cases,840
+2017,state,Nebraska,colon_rectum,All,deaths,330
+2017,state,Nevada,colon_rectum,All,cases,1160
+2017,state,Nevada,colon_rectum,All,deaths,500
+2017,state,New Hampshire,colon_rectum,All,cases,620
+2017,state,New Hampshire,colon_rectum,All,deaths,200
+2017,state,New Jersey,colon_rectum,All,cases,4000
+2017,state,New Jersey,colon_rectum,All,deaths,1420
+2017,state,New Mexico,colon_rectum,All,cases,800
+2017,state,New Mexico,colon_rectum,All,deaths,340
+2017,state,New York,colon_rectum,All,cases,8490
+2017,state,New York,colon_rectum,All,deaths,2870
+2017,state,North Carolina,colon_rectum,All,cases,4290
+2017,state,North Carolina,colon_rectum,All,deaths,1530
+2017,state,North Dakota,colon_rectum,All,cases,330
+2017,state,North Dakota,colon_rectum,All,deaths,120
+2017,state,Ohio,colon_rectum,All,cases,5510
+2017,state,Ohio,colon_rectum,All,deaths,2130
+2017,state,Oklahoma,colon_rectum,All,cases,1610
+2017,state,Oklahoma,colon_rectum,All,deaths,710
+2017,state,Oregon,colon_rectum,All,cases,1620
+2017,state,Oregon,colon_rectum,All,deaths,660
+2017,state,Pennsylvania,colon_rectum,All,cases,6300
+2017,state,Pennsylvania,colon_rectum,All,deaths,2390
+2017,state,Rhode Island,colon_rectum,All,cases,480
+2017,state,Rhode Island,colon_rectum,All,deaths,170
+2017,state,South Carolina,colon_rectum,All,cases,2270
+2017,state,South Carolina,colon_rectum,All,deaths,830
+2017,state,South Dakota,colon_rectum,All,cases,410
+2017,state,South Dakota,colon_rectum,All,deaths,160
+2017,state,Tennessee,colon_rectum,All,cases,3080
+2017,state,Tennessee,colon_rectum,All,deaths,1220
+2017,state,Texas,colon_rectum,All,cases,9690
+2017,state,Texas,colon_rectum,All,deaths,3700
+2017,state,US,colon_rectum,All,cases,135430
+2017,state,US,colon_rectum,All,deaths,50260
+2017,state,Utah,colon_rectum,All,cases,740
+2017,state,Utah,colon_rectum,All,deaths,260
+2017,state,Vermont,colon_rectum,All,cases,280
+2017,state,Vermont,colon_rectum,All,deaths,100
+2017,state,Virginia,colon_rectum,All,cases,3260
+2017,state,Virginia,colon_rectum,All,deaths,1190
+2017,state,Washington,colon_rectum,All,cases,2720
+2017,state,Washington,colon_rectum,All,deaths,970
+2017,state,West Virginia,colon_rectum,All,cases,1050
+2017,state,West Virginia,colon_rectum,All,deaths,430
+2017,state,Wisconsin,colon_rectum,All,cases,2650
+2017,state,Wisconsin,colon_rectum,All,deaths,880
+2017,state,Wyoming,colon_rectum,All,cases,220
+2017,state,Wyoming,colon_rectum,All,deaths,80
+2018,state,Alabama,colon_rectum,All,cases,2230
+2018,state,Alabama,colon_rectum,All,deaths,950
+2018,state,Alaska,colon_rectum,All,cases,270
+2018,state,Alaska,colon_rectum,All,deaths,100
+2018,state,Arizona,colon_rectum,All,cases,2840
+2018,state,Arizona,colon_rectum,All,deaths,1040
+2018,state,Arkansas,colon_rectum,All,cases,1370
+2018,state,Arkansas,colon_rectum,All,deaths,600
+2018,state,California,colon_rectum,All,cases,14400
+2018,state,California,colon_rectum,All,deaths,5300
+2018,state,Colorado,colon_rectum,All,cases,1850
+2018,state,Colorado,colon_rectum,All,deaths,660
+2018,state,Connecticut,colon_rectum,All,cases,1520
+2018,state,Connecticut,colon_rectum,All,deaths,460
+2018,state,Delaware,colon_rectum,All,cases,450
+2018,state,Delaware,colon_rectum,All,deaths,140
+2018,state,District of Columbia,colon_rectum,All,cases,240
+2018,state,District of Columbia,colon_rectum,All,deaths,90
+2018,state,Florida,colon_rectum,All,cases,11670
+2018,state,Florida,colon_rectum,All,deaths,3640
+2018,state,Georgia,colon_rectum,All,cases,4120
+2018,state,Georgia,colon_rectum,All,deaths,1580
+2018,state,Hawaii,colon_rectum,All,cases,650
+2018,state,Hawaii,colon_rectum,All,deaths,230
+2018,state,Idaho,colon_rectum,All,cases,630
+2018,state,Idaho,colon_rectum,All,deaths,240
+2018,state,Illinois,colon_rectum,All,cases,5340
+2018,state,Illinois,colon_rectum,All,deaths,2080
+2018,state,Indiana,colon_rectum,All,cases,3190
+2018,state,Indiana,colon_rectum,All,deaths,1110
+2018,state,Iowa,colon_rectum,All,cases,1510
+2018,state,Iowa,colon_rectum,All,deaths,570
+2018,state,Kansas,colon_rectum,All,cases,1220
+2018,state,Kansas,colon_rectum,All,deaths,470
+2018,state,Kentucky,colon_rectum,All,cases,2370
+2018,state,Kentucky,colon_rectum,All,deaths,830
+2018,state,Louisiana,colon_rectum,All,cases,2310
+2018,state,Louisiana,colon_rectum,All,deaths,830
+2018,state,Maine,colon_rectum,All,cases,660
+2018,state,Maine,colon_rectum,All,deaths,230
+2018,state,Maryland,colon_rectum,All,cases,2950
+2018,state,Maryland,colon_rectum,All,deaths,870
+2018,state,Massachusetts,colon_rectum,All,cases,2630
+2018,state,Massachusetts,colon_rectum,All,deaths,890
+2018,state,Michigan,colon_rectum,All,cases,4510
+2018,state,Michigan,colon_rectum,All,deaths,1670
+2018,state,Minnesota,colon_rectum,All,cases,2270
+2018,state,Minnesota,colon_rectum,All,deaths,770
+2018,state,Mississippi,colon_rectum,All,cases,1550
+2018,state,Mississippi,colon_rectum,All,deaths,640
+2018,state,Missouri,colon_rectum,All,cases,2890
+2018,state,Missouri,colon_rectum,All,deaths,1050
+2018,state,Montana,colon_rectum,All,cases,520
+2018,state,Montana,colon_rectum,All,deaths,180
+2018,state,Nebraska,colon_rectum,All,cases,900
+2018,state,Nebraska,colon_rectum,All,deaths,320
+2018,state,Nevada,colon_rectum,All,cases,1130
+2018,state,Nevada,colon_rectum,All,deaths,520
+2018,state,New Hampshire,colon_rectum,All,cases,590
+2018,state,New Hampshire,colon_rectum,All,deaths,190
+2018,state,New Jersey,colon_rectum,All,cases,4100
+2018,state,New Jersey,colon_rectum,All,deaths,1400
+2018,state,New Mexico,colon_rectum,All,cases,800
+2018,state,New Mexico,colon_rectum,All,deaths,340
+2018,state,New York,colon_rectum,All,cases,9080
+2018,state,New York,colon_rectum,All,deaths,2970
+2018,state,North Carolina,colon_rectum,All,cases,4440
+2018,state,North Carolina,colon_rectum,All,deaths,1570
+2018,state,North Dakota,colon_rectum,All,cases,350
+2018,state,North Dakota,colon_rectum,All,deaths,110
+2018,state,Ohio,colon_rectum,All,cases,5550
+2018,state,Ohio,colon_rectum,All,deaths,2100
+2018,state,Oklahoma,colon_rectum,All,cases,1670
+2018,state,Oklahoma,colon_rectum,All,deaths,750
+2018,state,Oregon,colon_rectum,All,cases,1510
+2018,state,Oregon,colon_rectum,All,deaths,650
+2018,state,Pennsylvania,colon_rectum,All,cases,6440
+2018,state,Pennsylvania,colon_rectum,All,deaths,2380
+2018,state,Rhode Island,colon_rectum,All,cases,460
+2018,state,Rhode Island,colon_rectum,All,deaths,160
+2018,state,South Carolina,colon_rectum,All,cases,2410
+2018,state,South Carolina,colon_rectum,All,deaths,860
+2018,state,South Dakota,colon_rectum,All,cases,440
+2018,state,South Dakota,colon_rectum,All,deaths,160
+2018,state,Tennessee,colon_rectum,All,cases,3110
+2018,state,Tennessee,colon_rectum,All,deaths,1220
+2018,state,Texas,colon_rectum,All,cases,10080
+2018,state,Texas,colon_rectum,All,deaths,3740
+2018,state,US,colon_rectum,All,cases,140250
+2018,state,US,colon_rectum,All,deaths,50630
+2018,state,Utah,colon_rectum,All,cases,780
+2018,state,Utah,colon_rectum,All,deaths,280
+2018,state,Vermont,colon_rectum,All,cases,270
+2018,state,Vermont,colon_rectum,All,deaths,110
+2018,state,Virginia,colon_rectum,All,cases,3380
+2018,state,Virginia,colon_rectum,All,deaths,1210
+2018,state,Washington,colon_rectum,All,cases,2710
+2018,state,Washington,colon_rectum,All,deaths,970
+2018,state,West Virginia,colon_rectum,All,cases,1030
+2018,state,West Virginia,colon_rectum,All,deaths,430
+2018,state,Wisconsin,colon_rectum,All,cases,2650
+2018,state,Wisconsin,colon_rectum,All,deaths,890
+2018,state,Wyoming,colon_rectum,All,cases,210
+2018,state,Wyoming,colon_rectum,All,deaths,80
+2019,state,Alabama,colon_rectum,All,cases,2330
+2019,state,Alabama,colon_rectum,All,deaths,930
+2019,state,Alaska,colon_rectum,All,cases,290
+2019,state,Alaska,colon_rectum,All,deaths,110
+2019,state,Arizona,colon_rectum,All,cases,2840
+2019,state,Arizona,colon_rectum,All,deaths,1050
+2019,state,Arkansas,colon_rectum,All,cases,1440
+2019,state,Arkansas,colon_rectum,All,deaths,600
+2019,state,California,colon_rectum,All,cases,15360
+2019,state,California,colon_rectum,All,deaths,5290
+2019,state,Colorado,colon_rectum,All,cases,1940
+2019,state,Colorado,colon_rectum,All,deaths,660
+2019,state,Connecticut,colon_rectum,All,cases,1560
+2019,state,Connecticut,colon_rectum,All,deaths,470
+2019,state,Delaware,colon_rectum,All,cases,440
+2019,state,Delaware,colon_rectum,All,deaths,150
+2019,state,District of Columbia,colon_rectum,All,cases,260
+2019,state,District of Columbia,colon_rectum,All,deaths,100
+2019,state,Florida,colon_rectum,All,cases,11310
+2019,state,Florida,colon_rectum,All,deaths,3700
+2019,state,Georgia,colon_rectum,All,cases,4450
+2019,state,Georgia,colon_rectum,All,deaths,1630
+2019,state,Hawaii,colon_rectum,All,cases,620
+2019,state,Hawaii,colon_rectum,All,deaths,230
+2019,state,Idaho,colon_rectum,All,cases,630
+2019,state,Idaho,colon_rectum,All,deaths,250
+2019,state,Illinois,colon_rectum,All,cases,6030
+2019,state,Illinois,colon_rectum,All,deaths,2070
+2019,state,Indiana,colon_rectum,All,cases,3360
+2019,state,Indiana,colon_rectum,All,deaths,1110
+2019,state,Iowa,colon_rectum,All,cases,1540
+2019,state,Iowa,colon_rectum,All,deaths,560
+2019,state,Kansas,colon_rectum,All,cases,1290
+2019,state,Kansas,colon_rectum,All,deaths,470
+2019,state,Kentucky,colon_rectum,All,cases,2320
+2019,state,Kentucky,colon_rectum,All,deaths,820
+2019,state,Louisiana,colon_rectum,All,cases,2340
+2019,state,Louisiana,colon_rectum,All,deaths,830
+2019,state,Maine,colon_rectum,All,cases,670
+2019,state,Maine,colon_rectum,All,deaths,230
+2019,state,Maryland,colon_rectum,All,cases,2620
+2019,state,Maryland,colon_rectum,All,deaths,880
+2019,state,Massachusetts,colon_rectum,All,cases,2840
+2019,state,Massachusetts,colon_rectum,All,deaths,870
+2019,state,Michigan,colon_rectum,All,cases,5040
+2019,state,Michigan,colon_rectum,All,deaths,1650
+2019,state,Minnesota,colon_rectum,All,cases,2300
+2019,state,Minnesota,colon_rectum,All,deaths,790
+2019,state,Mississippi,colon_rectum,All,cases,1680
+2019,state,Mississippi,colon_rectum,All,deaths,650
+2019,state,Missouri,colon_rectum,All,cases,3110
+2019,state,Missouri,colon_rectum,All,deaths,1050
+2019,state,Montana,colon_rectum,All,cases,470
+2019,state,Montana,colon_rectum,All,deaths,180
+2019,state,Nebraska,colon_rectum,All,cases,900
+2019,state,Nebraska,colon_rectum,All,deaths,310
+2019,state,Nevada,colon_rectum,All,cases,1340
+2019,state,Nevada,colon_rectum,All,deaths,540
+2019,state,New Hampshire,colon_rectum,All,cases,590
+2019,state,New Hampshire,colon_rectum,All,deaths,200
+2019,state,New Jersey,colon_rectum,All,cases,4250
+2019,state,New Jersey,colon_rectum,All,deaths,1410
+2019,state,New Mexico,colon_rectum,All,cases,830
+2019,state,New Mexico,colon_rectum,All,deaths,340
+2019,state,New York,colon_rectum,All,cases,9150
+2019,state,New York,colon_rectum,All,deaths,2890
+2019,state,North Carolina,colon_rectum,All,cases,4310
+2019,state,North Carolina,colon_rectum,All,deaths,1580
+2019,state,North Dakota,colon_rectum,All,cases,350
+2019,state,North Dakota,colon_rectum,All,deaths,120
+2019,state,Ohio,colon_rectum,All,cases,6200
+2019,state,Ohio,colon_rectum,All,deaths,2110
+2019,state,Oklahoma,colon_rectum,All,cases,1840
+2019,state,Oklahoma,colon_rectum,All,deaths,760
+2019,state,Oregon,colon_rectum,All,cases,1620
+2019,state,Oregon,colon_rectum,All,deaths,650
+2019,state,Pennsylvania,colon_rectum,All,cases,6520
+2019,state,Pennsylvania,colon_rectum,All,deaths,2380
+2019,state,Rhode Island,colon_rectum,All,cases,470
+2019,state,Rhode Island,colon_rectum,All,deaths,160
+2019,state,South Carolina,colon_rectum,All,cases,2370
+2019,state,South Carolina,colon_rectum,All,deaths,870
+2019,state,South Dakota,colon_rectum,All,cases,430
+2019,state,South Dakota,colon_rectum,All,deaths,170
+2019,state,Tennessee,colon_rectum,All,cases,3290
+2019,state,Tennessee,colon_rectum,All,deaths,1220
+2019,state,Texas,colon_rectum,All,cases,10950
+2019,state,Texas,colon_rectum,All,deaths,3850
+2019,state,US,colon_rectum,All,cases,145600
+2019,state,US,colon_rectum,All,deaths,51020
+2019,state,Utah,colon_rectum,All,cases,770
+2019,state,Utah,colon_rectum,All,deaths,280
+2019,state,Vermont,colon_rectum,All,cases,280
+2019,state,Vermont,colon_rectum,All,deaths,110
+2019,state,Virginia,colon_rectum,All,cases,3540
+2019,state,Virginia,colon_rectum,All,deaths,1340
+2019,state,Washington,colon_rectum,All,cases,2800
+2019,state,Washington,colon_rectum,All,deaths,1000
+2019,state,West Virginia,colon_rectum,All,cases,980
+2019,state,West Virginia,colon_rectum,All,deaths,440
+2019,state,Wisconsin,colon_rectum,All,cases,2450
+2019,state,Wisconsin,colon_rectum,All,deaths,900
+2019,state,Wyoming,colon_rectum,All,cases,250
+2019,state,Wyoming,colon_rectum,All,deaths,80
+2020,state,Alabama,colon_rectum,All,cases,2460
+2020,state,Alabama,colon_rectum,All,deaths,960
+2020,state,Alaska,colon_rectum,All,cases,320
+2020,state,Alaska,colon_rectum,All,deaths,120
+2020,state,Arizona,colon_rectum,All,cases,3010
+2020,state,Arizona,colon_rectum,All,deaths,1120
+2020,state,Arkansas,colon_rectum,All,cases,1540
+2020,state,Arkansas,colon_rectum,All,deaths,610
+2020,state,California,colon_rectum,All,cases,15530
+2020,state,California,colon_rectum,All,deaths,5480
+2020,state,Colorado,colon_rectum,All,cases,2040
+2020,state,Colorado,colon_rectum,All,deaths,700
+2020,state,Connecticut,colon_rectum,All,cases,1520
+2020,state,Connecticut,colon_rectum,All,deaths,460
+2020,state,Delaware,colon_rectum,All,cases,470
+2020,state,Delaware,colon_rectum,All,deaths,160
+2020,state,District of Columbia,colon_rectum,All,cases,250
+2020,state,District of Columbia,colon_rectum,All,deaths,100
+2020,state,Florida,colon_rectum,All,cases,11310
+2020,state,Florida,colon_rectum,All,deaths,3930
+2020,state,Georgia,colon_rectum,All,cases,4660
+2020,state,Georgia,colon_rectum,All,deaths,1730
+2020,state,Hawaii,colon_rectum,All,cases,730
+2020,state,Hawaii,colon_rectum,All,deaths,240
+2020,state,Idaho,colon_rectum,All,cases,730
+2020,state,Idaho,colon_rectum,All,deaths,260
+2020,state,Illinois,colon_rectum,All,cases,6240
+2020,state,Illinois,colon_rectum,All,deaths,2160
+2020,state,Indiana,colon_rectum,All,cases,3410
+2020,state,Indiana,colon_rectum,All,deaths,1170
+2020,state,Iowa,colon_rectum,All,cases,1600
+2020,state,Iowa,colon_rectum,All,deaths,560
+2020,state,Kansas,colon_rectum,All,cases,1320
+2020,state,Kansas,colon_rectum,All,deaths,500
+2020,state,Kentucky,colon_rectum,All,cases,2440
+2020,state,Kentucky,colon_rectum,All,deaths,870
+2020,state,Louisiana,colon_rectum,All,cases,2370
+2020,state,Louisiana,colon_rectum,All,deaths,880
+2020,state,Maine,colon_rectum,All,cases,670
+2020,state,Maine,colon_rectum,All,deaths,240
+2020,state,Maryland,colon_rectum,All,cases,2570
+2020,state,Maryland,colon_rectum,All,deaths,920
+2020,state,Massachusetts,colon_rectum,All,cases,2650
+2020,state,Massachusetts,colon_rectum,All,deaths,910
+2020,state,Michigan,colon_rectum,All,cases,4620
+2020,state,Michigan,colon_rectum,All,deaths,1700
+2020,state,Minnesota,colon_rectum,All,cases,2320
+2020,state,Minnesota,colon_rectum,All,deaths,790
+2020,state,Mississippi,colon_rectum,All,cases,1730
+2020,state,Mississippi,colon_rectum,All,deaths,670
+2020,state,Missouri,colon_rectum,All,cases,3090
+2020,state,Missouri,colon_rectum,All,deaths,1090
+2020,state,Montana,colon_rectum,All,cases,500
+2020,state,Montana,colon_rectum,All,deaths,190
+2020,state,Nebraska,colon_rectum,All,cases,940
+2020,state,Nebraska,colon_rectum,All,deaths,320
+2020,state,Nevada,colon_rectum,All,cases,1480
+2020,state,Nevada,colon_rectum,All,deaths,590
+2020,state,New Hampshire,colon_rectum,All,cases,590
+2020,state,New Hampshire,colon_rectum,All,deaths,290
+2020,state,New Jersey,colon_rectum,All,cases,4250
+2020,state,New Jersey,colon_rectum,All,deaths,1440
+2020,state,New Mexico,colon_rectum,All,cases,890
+2020,state,New Mexico,colon_rectum,All,deaths,360
+2020,state,New York,colon_rectum,All,cases,8910
+2020,state,New York,colon_rectum,All,deaths,2950
+2020,state,North Carolina,colon_rectum,All,cases,4540
+2020,state,North Carolina,colon_rectum,All,deaths,1640
+2020,state,North Dakota,colon_rectum,All,cases,360
+2020,state,North Dakota,colon_rectum,All,deaths,110
+2020,state,Ohio,colon_rectum,All,cases,5910
+2020,state,Ohio,colon_rectum,All,deaths,2170
+2020,state,Oklahoma,colon_rectum,All,cases,1870
+2020,state,Oklahoma,colon_rectum,All,deaths,800
+2020,state,Oregon,colon_rectum,All,cases,1740
+2020,state,Oregon,colon_rectum,All,deaths,660
+2020,state,Pennsylvania,colon_rectum,All,cases,6520
+2020,state,Pennsylvania,colon_rectum,All,deaths,2440
+2020,state,Rhode Island,colon_rectum,All,cases,430
+2020,state,Rhode Island,colon_rectum,All,deaths,160
+2020,state,South Carolina,colon_rectum,All,cases,2550
+2020,state,South Carolina,colon_rectum,All,deaths,910
+2020,state,South Dakota,colon_rectum,All,cases,430
+2020,state,South Dakota,colon_rectum,All,deaths,170
+2020,state,Tennessee,colon_rectum,All,cases,3540
+2020,state,Tennessee,colon_rectum,All,deaths,1260
+2020,state,Texas,colon_rectum,All,cases,11430
+2020,state,Texas,colon_rectum,All,deaths,4070
+2020,state,US,colon_rectum,All,cases,147950
+2020,state,US,colon_rectum,All,deaths,53200
+2020,state,Utah,colon_rectum,All,cases,840
+2020,state,Utah,colon_rectum,All,deaths,300
+2020,state,Vermont,colon_rectum,All,cases,270
+2020,state,Vermont,colon_rectum,All,deaths,130
+2020,state,Virginia,colon_rectum,All,cases,3530
+2020,state,Virginia,colon_rectum,All,deaths,1400
+2020,state,Washington,colon_rectum,All,cases,2970
+2020,state,Washington,colon_rectum,All,deaths,1050
+2020,state,West Virginia,colon_rectum,All,cases,1040
+2020,state,West Virginia,colon_rectum,All,deaths,440
+2020,state,Wisconsin,colon_rectum,All,cases,2540
+2020,state,Wisconsin,colon_rectum,All,deaths,920
+2020,state,Wyoming,colon_rectum,All,cases,260
+2020,state,Wyoming,colon_rectum,All,deaths,80
+2021,state,Alabama,colon_rectum,All,cases,2470
+2021,state,Alabama,colon_rectum,All,deaths,920
+2021,state,Alaska,colon_rectum,All,cases,330
+2021,state,Alaska,colon_rectum,All,deaths,110
+2021,state,Arizona,colon_rectum,All,cases,3060
+2021,state,Arizona,colon_rectum,All,deaths,1240
+2021,state,Arkansas,colon_rectum,All,cases,1500
+2021,state,Arkansas,colon_rectum,All,deaths,500
+2021,state,California,colon_rectum,All,cases,15880
+2021,state,California,colon_rectum,All,deaths,5390
+2021,state,Colorado,colon_rectum,All,cases,2140
+2021,state,Colorado,colon_rectum,All,deaths,700
+2021,state,Connecticut,colon_rectum,All,cases,1560
+2021,state,Connecticut,colon_rectum,All,deaths,440
+2021,state,Delaware,colon_rectum,All,cases,490
+2021,state,Delaware,colon_rectum,All,deaths,160
+2021,state,District of Columbia,colon_rectum,All,cases,270
+2021,state,District of Columbia,colon_rectum,All,deaths,90
+2021,state,Florida,colon_rectum,All,cases,11220
+2021,state,Florida,colon_rectum,All,deaths,4360
+2021,state,Georgia,colon_rectum,All,cases,4840
+2021,state,Georgia,colon_rectum,All,deaths,1700
+2021,state,Hawaii,colon_rectum,All,cases,710
+2021,state,Hawaii,colon_rectum,All,deaths,230
+2021,state,Idaho,colon_rectum,All,cases,740
+2021,state,Idaho,colon_rectum,All,deaths,330
+2021,state,Illinois,colon_rectum,All,cases,6200
+2021,state,Illinois,colon_rectum,All,deaths,2100
+2021,state,Indiana,colon_rectum,All,cases,3310
+2021,state,Indiana,colon_rectum,All,deaths,1160
+2021,state,Iowa,colon_rectum,All,cases,1570
+2021,state,Iowa,colon_rectum,All,deaths,550
+2021,state,Kansas,colon_rectum,All,cases,1440
+2021,state,Kansas,colon_rectum,All,deaths,500
+2021,state,Kentucky,colon_rectum,All,cases,2540
+2021,state,Kentucky,colon_rectum,All,deaths,930
+2021,state,Louisiana,colon_rectum,All,cases,2440
+2021,state,Louisiana,colon_rectum,All,deaths,860
+2021,state,Maine,colon_rectum,All,cases,700
+2021,state,Maine,colon_rectum,All,deaths,230
+2021,state,Maryland,colon_rectum,All,cases,2550
+2021,state,Maryland,colon_rectum,All,deaths,1050
+2021,state,Massachusetts,colon_rectum,All,cases,2940
+2021,state,Massachusetts,colon_rectum,All,deaths,1000
+2021,state,Michigan,colon_rectum,All,cases,4690
+2021,state,Michigan,colon_rectum,All,deaths,1640
+2021,state,Minnesota,colon_rectum,All,cases,2490
+2021,state,Minnesota,colon_rectum,All,deaths,850
+2021,state,Mississippi,colon_rectum,All,cases,1670
+2021,state,Mississippi,colon_rectum,All,deaths,650
+2021,state,Missouri,colon_rectum,All,cases,2930
+2021,state,Missouri,colon_rectum,All,deaths,1070
+2021,state,Montana,colon_rectum,All,cases,500
+2021,state,Montana,colon_rectum,All,deaths,180
+2021,state,Nebraska,colon_rectum,All,cases,950
+2021,state,Nebraska,colon_rectum,All,deaths,320
+2021,state,Nevada,colon_rectum,All,cases,1400
+2021,state,Nevada,colon_rectum,All,deaths,560
+2021,state,New Hampshire,colon_rectum,All,cases,670
+2021,state,New Hampshire,colon_rectum,All,deaths,290
+2021,state,New Jersey,colon_rectum,All,cases,4250
+2021,state,New Jersey,colon_rectum,All,deaths,1410
+2021,state,New Mexico,colon_rectum,All,cases,860
+2021,state,New Mexico,colon_rectum,All,deaths,350
+2021,state,New York,colon_rectum,All,cases,8920
+2021,state,New York,colon_rectum,All,deaths,2820
+2021,state,North Carolina,colon_rectum,All,cases,4650
+2021,state,North Carolina,colon_rectum,All,deaths,1590
+2021,state,North Dakota,colon_rectum,All,cases,350
+2021,state,North Dakota,colon_rectum,All,deaths,110
+2021,state,Ohio,colon_rectum,All,cases,5860
+2021,state,Ohio,colon_rectum,All,deaths,2110
+2021,state,Oklahoma,colon_rectum,All,cases,1900
+2021,state,Oklahoma,colon_rectum,All,deaths,770
+2021,state,Oregon,colon_rectum,All,cases,1810
+2021,state,Oregon,colon_rectum,All,deaths,650
+2021,state,Pennsylvania,colon_rectum,All,cases,6670
+2021,state,Pennsylvania,colon_rectum,All,deaths,2340
+2021,state,Rhode Island,colon_rectum,All,cases,490
+2021,state,Rhode Island,colon_rectum,All,deaths,160
+2021,state,South Carolina,colon_rectum,All,cases,2570
+2021,state,South Carolina,colon_rectum,All,deaths,880
+2021,state,South Dakota,colon_rectum,All,cases,450
+2021,state,South Dakota,colon_rectum,All,deaths,170
+2021,state,Tennessee,colon_rectum,All,cases,3370
+2021,state,Tennessee,colon_rectum,All,deaths,1220
+2021,state,Texas,colon_rectum,All,cases,11280
+2021,state,Texas,colon_rectum,All,deaths,4030
+2021,state,US,colon_rectum,All,cases,149500
+2021,state,US,colon_rectum,All,deaths,52980
+2021,state,Utah,colon_rectum,All,cases,900
+2021,state,Utah,colon_rectum,All,deaths,290
+2021,state,Vermont,colon_rectum,All,cases,310
+2021,state,Vermont,colon_rectum,All,deaths,130
+2021,state,Virginia,colon_rectum,All,cases,3600
+2021,state,Virginia,colon_rectum,All,deaths,1400
+2021,state,Washington,colon_rectum,All,cases,3140
+2021,state,Washington,colon_rectum,All,deaths,1020
+2021,state,West Virginia,colon_rectum,All,cases,1090
+2021,state,West Virginia,colon_rectum,All,deaths,430
+2021,state,Wisconsin,colon_rectum,All,cases,2620
+2021,state,Wisconsin,colon_rectum,All,deaths,900
+2021,state,Wyoming,colon_rectum,All,cases,230
+2021,state,Wyoming,colon_rectum,All,deaths,80
+2022,national,US,colon_rectum,Both,cases,151030
+2022,national,US,colon_rectum,Female,cases,70340
+2022,national,US,colon_rectum,Male,cases,80690
+2022,national,US,colon_rectum,Both,deaths,52580
+2022,national,US,colon_rectum,Female,deaths,24180
+2022,national,US,colon_rectum,Male,deaths,28400
+2022,state,Alabama,colon_rectum,All,cases,2510
+2022,state,Alabama,colon_rectum,All,deaths,910
+2022,state,Alaska,colon_rectum,All,cases,320
+2022,state,Alaska,colon_rectum,All,deaths,110
+2022,state,Arizona,colon_rectum,All,cases,3150
+2022,state,Arizona,colon_rectum,All,deaths,1210
+2022,state,Arkansas,colon_rectum,All,cases,1530
+2022,state,Arkansas,colon_rectum,All,deaths,560
+2022,state,California,colon_rectum,All,cases,15970
+2022,state,California,colon_rectum,All,deaths,5470
+2022,state,Colorado,colon_rectum,All,cases,2140
+2022,state,Colorado,colon_rectum,All,deaths,710
+2022,state,Connecticut,colon_rectum,All,cases,1550
+2022,state,Connecticut,colon_rectum,All,deaths,470
+2022,state,Delaware,colon_rectum,All,cases,500
+2022,state,Delaware,colon_rectum,All,deaths,160
+2022,state,District of Columbia,colon_rectum,All,cases,250
+2022,state,District of Columbia,colon_rectum,All,deaths,90
+2022,state,Florida,colon_rectum,All,cases,11490
+2022,state,Florida,colon_rectum,All,deaths,4110
+2022,state,Georgia,colon_rectum,All,cases,4970
+2022,state,Georgia,colon_rectum,All,deaths,1590
+2022,state,Hawaii,colon_rectum,All,cases,700
+2022,state,Hawaii,colon_rectum,All,deaths,240
+2022,state,Idaho,colon_rectum,All,cases,750
+2022,state,Idaho,colon_rectum,All,deaths,270
+2022,state,Illinois,colon_rectum,All,cases,6260
+2022,state,Illinois,colon_rectum,All,deaths,2110
+2022,state,Indiana,colon_rectum,All,cases,3290
+2022,state,Indiana,colon_rectum,All,deaths,1160
+2022,state,Iowa,colon_rectum,All,cases,1570
+2022,state,Iowa,colon_rectum,All,deaths,540
+2022,state,Kansas,colon_rectum,All,cases,1510
+2022,state,Kansas,colon_rectum,All,deaths,480
+2022,state,Kentucky,colon_rectum,All,cases,2600
+2022,state,Kentucky,colon_rectum,All,deaths,880
+2022,state,Louisiana,colon_rectum,All,cases,2440
+2022,state,Louisiana,colon_rectum,All,deaths,880
+2022,state,Maine,colon_rectum,All,cases,700
+2022,state,Maine,colon_rectum,All,deaths,230
+2022,state,Maryland,colon_rectum,All,cases,2540
+2022,state,Maryland,colon_rectum,All,deaths,980
+2022,state,Massachusetts,colon_rectum,All,cases,2940
+2022,state,Massachusetts,colon_rectum,All,deaths,990
+2022,state,Michigan,colon_rectum,All,cases,4680
+2022,state,Michigan,colon_rectum,All,deaths,1700
+2022,state,Minnesota,colon_rectum,All,cases,2420
+2022,state,Minnesota,colon_rectum,All,deaths,790
+2022,state,Mississippi,colon_rectum,All,cases,1680
+2022,state,Mississippi,colon_rectum,All,deaths,660
+2022,state,Missouri,colon_rectum,All,cases,2970
+2022,state,Missouri,colon_rectum,All,deaths,1070
+2022,state,Montana,colon_rectum,All,cases,510
+2022,state,Montana,colon_rectum,All,deaths,170
+2022,state,Nebraska,colon_rectum,All,cases,960
+2022,state,Nebraska,colon_rectum,All,deaths,320
+2022,state,Nevada,colon_rectum,All,cases,1430
+2022,state,Nevada,colon_rectum,All,deaths,470
+2022,state,New Hampshire,colon_rectum,All,cases,670
+2022,state,New Hampshire,colon_rectum,All,deaths,210
+2022,state,New Jersey,colon_rectum,All,cases,4260
+2022,state,New Jersey,colon_rectum,All,deaths,1380
+2022,state,New Mexico,colon_rectum,All,cases,890
+2022,state,New Mexico,colon_rectum,All,deaths,330
+2022,state,New York,colon_rectum,All,cases,8950
+2022,state,New York,colon_rectum,All,deaths,2670
+2022,state,North Carolina,colon_rectum,All,cases,4760
+2022,state,North Carolina,colon_rectum,All,deaths,1630
+2022,state,North Dakota,colon_rectum,All,cases,340
+2022,state,North Dakota,colon_rectum,All,deaths,110
+2022,state,Ohio,colon_rectum,All,cases,5870
+2022,state,Ohio,colon_rectum,All,deaths,2110
+2022,state,Oklahoma,colon_rectum,All,cases,1900
+2022,state,Oklahoma,colon_rectum,All,deaths,770
+2022,state,Oregon,colon_rectum,All,cases,1850
+2022,state,Oregon,colon_rectum,All,deaths,650
+2022,state,Pennsylvania,colon_rectum,All,cases,6610
+2022,state,Pennsylvania,colon_rectum,All,deaths,2310
+2022,state,Rhode Island,colon_rectum,All,cases,490
+2022,state,Rhode Island,colon_rectum,All,deaths,160
+2022,state,South Carolina,colon_rectum,All,cases,2570
+2022,state,South Carolina,colon_rectum,All,deaths,890
+2022,state,South Dakota,colon_rectum,All,cases,430
+2022,state,South Dakota,colon_rectum,All,deaths,160
+2022,state,Tennessee,colon_rectum,All,cases,3420
+2022,state,Tennessee,colon_rectum,All,deaths,1250
+2022,state,Texas,colon_rectum,All,cases,11780
+2022,state,Texas,colon_rectum,All,deaths,4280
+2022,state,US,colon_rectum,All,cases,151030
+2022,state,US,colon_rectum,All,deaths,52580
+2022,state,Utah,colon_rectum,All,cases,900
+2022,state,Utah,colon_rectum,All,deaths,310
+2022,state,Vermont,colon_rectum,All,cases,300
+2022,state,Vermont,colon_rectum,All,deaths,120
+2022,state,Virginia,colon_rectum,All,cases,3610
+2022,state,Virginia,colon_rectum,All,deaths,1370
+2022,state,Washington,colon_rectum,All,cases,3120
+2022,state,Washington,colon_rectum,All,deaths,1110
+2022,state,West Virginia,colon_rectum,All,cases,1080
+2022,state,West Virginia,colon_rectum,All,deaths,440
+2022,state,Wisconsin,colon_rectum,All,cases,2680
+2022,state,Wisconsin,colon_rectum,All,deaths,900
+2022,state,Wyoming,colon_rectum,All,cases,240
+2022,state,Wyoming,colon_rectum,All,deaths,80
+2023,national,US,colon_rectum,Both,cases,153020
+2023,national,US,colon_rectum,Female,cases,71160
+2023,national,US,colon_rectum,Male,cases,81860
+2023,national,US,colon_rectum,Both,deaths,52550
+2023,national,US,colon_rectum,Female,deaths,24080
+2023,national,US,colon_rectum,Male,deaths,28470
+2023,state,Alabama,colon_rectum,All,cases,2570
+2023,state,Alabama,colon_rectum,All,deaths,900
+2023,state,Alaska,colon_rectum,All,cases,330
+2023,state,Alaska,colon_rectum,All,deaths,110
+2023,state,Arizona,colon_rectum,All,cases,3220
+2023,state,Arizona,colon_rectum,All,deaths,1300
+2023,state,Arkansas,colon_rectum,All,cases,1630
+2023,state,Arkansas,colon_rectum,All,deaths,550
+2023,state,California,colon_rectum,All,cases,16420
+2023,state,California,colon_rectum,All,deaths,5530
+2023,state,Colorado,colon_rectum,All,cases,2120
+2023,state,Colorado,colon_rectum,All,deaths,740
+2023,state,Connecticut,colon_rectum,All,cases,1560
+2023,state,Connecticut,colon_rectum,All,deaths,550
+2023,state,Delaware,colon_rectum,All,cases,500
+2023,state,Delaware,colon_rectum,All,deaths,170
+2023,state,District of Columbia,colon_rectum,All,cases,240
+2023,state,District of Columbia,colon_rectum,All,deaths,90
+2023,state,Florida,colon_rectum,All,cases,11750
+2023,state,Florida,colon_rectum,All,deaths,3810
+2023,state,Georgia,colon_rectum,All,cases,4880
+2023,state,Georgia,colon_rectum,All,deaths,1640
+2023,state,Hawaii,colon_rectum,All,cases,770
+2023,state,Hawaii,colon_rectum,All,deaths,240
+2023,state,Idaho,colon_rectum,All,cases,810
+2023,state,Idaho,colon_rectum,All,deaths,270
+2023,state,Illinois,colon_rectum,All,cases,6200
+2023,state,Illinois,colon_rectum,All,deaths,2110
+2023,state,Indiana,colon_rectum,All,cases,3430
+2023,state,Indiana,colon_rectum,All,deaths,1170
+2023,state,Iowa,colon_rectum,All,cases,1630
+2023,state,Iowa,colon_rectum,All,deaths,540
+2023,state,Kansas,colon_rectum,All,cases,1430
+2023,state,Kansas,colon_rectum,All,deaths,500
+2023,state,Kentucky,colon_rectum,All,cases,2640
+2023,state,Kentucky,colon_rectum,All,deaths,890
+2023,state,Louisiana,colon_rectum,All,cases,2560
+2023,state,Louisiana,colon_rectum,All,deaths,870
+2023,state,Maine,colon_rectum,All,cases,690
+2023,state,Maine,colon_rectum,All,deaths,270
+2023,state,Maryland,colon_rectum,All,cases,2560
+2023,state,Maryland,colon_rectum,All,deaths,980
+2023,state,Massachusetts,colon_rectum,All,cases,2880
+2023,state,Massachusetts,colon_rectum,All,deaths,880
+2023,state,Michigan,colon_rectum,All,cases,4630
+2023,state,Michigan,colon_rectum,All,deaths,1740
+2023,state,Minnesota,colon_rectum,All,cases,2430
+2023,state,Minnesota,colon_rectum,All,deaths,830
+2023,state,Mississippi,colon_rectum,All,cases,1750
+2023,state,Mississippi,colon_rectum,All,deaths,640
+2023,state,Missouri,colon_rectum,All,cases,3030
+2023,state,Missouri,colon_rectum,All,deaths,940
+2023,state,Montana,colon_rectum,All,cases,540
+2023,state,Montana,colon_rectum,All,deaths,170
+2023,state,Nebraska,colon_rectum,All,cases,950
+2023,state,Nebraska,colon_rectum,All,deaths,320
+2023,state,Nevada,colon_rectum,All,cases,1490
+2023,state,Nevada,colon_rectum,All,deaths,470
+2023,state,New Hampshire,colon_rectum,All,cases,650
+2023,state,New Hampshire,colon_rectum,All,deaths,190
+2023,state,New Jersey,colon_rectum,All,cases,4220
+2023,state,New Jersey,colon_rectum,All,deaths,1360
+2023,state,New Mexico,colon_rectum,All,cases,940
+2023,state,New Mexico,colon_rectum,All,deaths,290
+2023,state,New York,colon_rectum,All,cases,8970
+2023,state,New York,colon_rectum,All,deaths,2770
+2023,state,North Carolina,colon_rectum,All,cases,4740
+2023,state,North Carolina,colon_rectum,All,deaths,1640
+2023,state,North Dakota,colon_rectum,All,cases,370
+2023,state,North Dakota,colon_rectum,All,deaths,110
+2023,state,Ohio,colon_rectum,All,cases,5910
+2023,state,Ohio,colon_rectum,All,deaths,2120
+2023,state,Oklahoma,colon_rectum,All,cases,1950
+2023,state,Oklahoma,colon_rectum,All,deaths,800
+2023,state,Oregon,colon_rectum,All,cases,1840
+2023,state,Oregon,colon_rectum,All,deaths,640
+2023,state,Pennsylvania,colon_rectum,All,cases,6610
+2023,state,Pennsylvania,colon_rectum,All,deaths,2280
+2023,state,Rhode Island,colon_rectum,All,cases,470
+2023,state,Rhode Island,colon_rectum,All,deaths,160
+2023,state,South Carolina,colon_rectum,All,cases,2550
+2023,state,South Carolina,colon_rectum,All,deaths,910
+2023,state,South Dakota,colon_rectum,All,cases,440
+2023,state,South Dakota,colon_rectum,All,deaths,170
+2023,state,Tennessee,colon_rectum,All,cases,3450
+2023,state,Tennessee,colon_rectum,All,deaths,1240
+2023,state,Texas,colon_rectum,All,cases,12220
+2023,state,Texas,colon_rectum,All,deaths,4350
+2023,state,US,colon_rectum,All,cases,153020
+2023,state,US,colon_rectum,All,deaths,52550
+2023,state,Utah,colon_rectum,All,cases,940
+2023,state,Utah,colon_rectum,All,deaths,310
+2023,state,Vermont,colon_rectum,All,cases,300
+2023,state,Vermont,colon_rectum,All,deaths,120
+2023,state,Virginia,colon_rectum,All,cases,3630
+2023,state,Virginia,colon_rectum,All,deaths,1410
+2023,state,Washington,colon_rectum,All,cases,3160
+2023,state,Washington,colon_rectum,All,deaths,1050
+2023,state,West Virginia,colon_rectum,All,cases,1120
+2023,state,West Virginia,colon_rectum,All,deaths,440
+2023,state,Wisconsin,colon_rectum,All,cases,2650
+2023,state,Wisconsin,colon_rectum,All,deaths,880
+2023,state,Wyoming,colon_rectum,All,cases,260
+2023,state,Wyoming,colon_rectum,All,deaths,110
+2024,national,US,colon_rectum,Both,cases,152810
+2024,national,US,colon_rectum,Female,cases,71270
+2024,national,US,colon_rectum,Male,cases,81540
+2024,national,US,colon_rectum,Both,deaths,53010
+2024,national,US,colon_rectum,Female,deaths,24310
+2024,national,US,colon_rectum,Male,deaths,28700
+2024,state,Alabama,colon_rectum,All,cases,2570
+2024,state,Alabama,colon_rectum,All,deaths,900
+2024,state,Alaska,colon_rectum,All,cases,350
+2024,state,Alaska,colon_rectum,All,deaths,110
+2024,state,Arizona,colon_rectum,All,cases,3280
+2024,state,Arizona,colon_rectum,All,deaths,1220
+2024,state,Arkansas,colon_rectum,All,cases,1570
+2024,state,Arkansas,colon_rectum,All,deaths,550
+2024,state,California,colon_rectum,All,cases,16170
+2024,state,California,colon_rectum,All,deaths,5500
+2024,state,Colorado,colon_rectum,All,cases,2130
+2024,state,Colorado,colon_rectum,All,deaths,820
+2024,state,Connecticut,colon_rectum,All,cases,1580
+2024,state,Connecticut,colon_rectum,All,deaths,470
+2024,state,Delaware,colon_rectum,All,cases,500
+2024,state,Delaware,colon_rectum,All,deaths,170
+2024,state,District of Columbia,colon_rectum,All,cases,260
+2024,state,District of Columbia,colon_rectum,All,deaths,90
+2024,state,Florida,colon_rectum,All,cases,11920
+2024,state,Florida,colon_rectum,All,deaths,3980
+2024,state,Georgia,colon_rectum,All,cases,4940
+2024,state,Georgia,colon_rectum,All,deaths,1660
+2024,state,Hawaii,colon_rectum,All,cases,770
+2024,state,Hawaii,colon_rectum,All,deaths,240
+2024,state,Idaho,colon_rectum,All,cases,810
+2024,state,Idaho,colon_rectum,All,deaths,300
+2024,state,Illinois,colon_rectum,All,cases,6140
+2024,state,Illinois,colon_rectum,All,deaths,2090
+2024,state,Indiana,colon_rectum,All,cases,3390
+2024,state,Indiana,colon_rectum,All,deaths,1190
+2024,state,Iowa,colon_rectum,All,cases,1620
+2024,state,Iowa,colon_rectum,All,deaths,520
+2024,state,Kansas,colon_rectum,All,cases,1420
+2024,state,Kansas,colon_rectum,All,deaths,490
+2024,state,Kentucky,colon_rectum,All,cases,2630
+2024,state,Kentucky,colon_rectum,All,deaths,940
+2024,state,Louisiana,colon_rectum,All,cases,2520
+2024,state,Louisiana,colon_rectum,All,deaths,860
+2024,state,Maine,colon_rectum,All,cases,700
+2024,state,Maine,colon_rectum,All,deaths,270
+2024,state,Maryland,colon_rectum,All,cases,2620
+2024,state,Maryland,colon_rectum,All,deaths,1000
+2024,state,Massachusetts,colon_rectum,All,cases,2790
+2024,state,Massachusetts,colon_rectum,All,deaths,860
+2024,state,Michigan,colon_rectum,All,cases,4640
+2024,state,Michigan,colon_rectum,All,deaths,1880
+2024,state,Minnesota,colon_rectum,All,cases,2550
+2024,state,Minnesota,colon_rectum,All,deaths,830
+2024,state,Mississippi,colon_rectum,All,cases,1700
+2024,state,Mississippi,colon_rectum,All,deaths,650
+2024,state,Missouri,colon_rectum,All,cases,3020
+2024,state,Missouri,colon_rectum,All,deaths,1050
+2024,state,Montana,colon_rectum,All,cases,550
+2024,state,Montana,colon_rectum,All,deaths,180
+2024,state,Nebraska,colon_rectum,All,cases,940
+2024,state,Nebraska,colon_rectum,All,deaths,380
+2024,state,Nevada,colon_rectum,All,cases,1520
+2024,state,Nevada,colon_rectum,All,deaths,560
+2024,state,New Hampshire,colon_rectum,All,cases,650
+2024,state,New Hampshire,colon_rectum,All,deaths,190
+2024,state,New Jersey,colon_rectum,All,cases,4240
+2024,state,New Jersey,colon_rectum,All,deaths,1330
+2024,state,New Mexico,colon_rectum,All,cases,960
+2024,state,New Mexico,colon_rectum,All,deaths,340
+2024,state,New York,colon_rectum,All,cases,8780
+2024,state,New York,colon_rectum,All,deaths,2700
+2024,state,North Carolina,colon_rectum,All,cases,4760
+2024,state,North Carolina,colon_rectum,All,deaths,1670
+2024,state,North Dakota,colon_rectum,All,cases,370
+2024,state,North Dakota,colon_rectum,All,deaths,110
+2024,state,Ohio,colon_rectum,All,cases,5890
+2024,state,Ohio,colon_rectum,All,deaths,2070
+2024,state,Oklahoma,colon_rectum,All,cases,1930
+2024,state,Oklahoma,colon_rectum,All,deaths,790
+2024,state,Oregon,colon_rectum,All,cases,1860
+2024,state,Oregon,colon_rectum,All,deaths,640
+2024,state,Pennsylvania,colon_rectum,All,cases,6550
+2024,state,Pennsylvania,colon_rectum,All,deaths,2230
+2024,state,Rhode Island,colon_rectum,All,cases,470
+2024,state,Rhode Island,colon_rectum,All,deaths,150
+2024,state,South Carolina,colon_rectum,All,cases,2580
+2024,state,South Carolina,colon_rectum,All,deaths,920
+2024,state,South Dakota,colon_rectum,All,cases,450
+2024,state,South Dakota,colon_rectum,All,deaths,160
+2024,state,Tennessee,colon_rectum,All,cases,3460
+2024,state,Tennessee,colon_rectum,All,deaths,1220
+2024,state,Texas,colon_rectum,All,cases,12260
+2024,state,Texas,colon_rectum,All,deaths,4410
+2024,state,US,colon_rectum,All,cases,152810
+2024,state,US,colon_rectum,All,deaths,53010
+2024,state,Utah,colon_rectum,All,cases,950
+2024,state,Utah,colon_rectum,All,deaths,320
+2024,state,Vermont,colon_rectum,All,cases,300
+2024,state,Vermont,colon_rectum,All,deaths,120
+2024,state,Virginia,colon_rectum,All,cases,3640
+2024,state,Virginia,colon_rectum,All,deaths,1390
+2024,state,Washington,colon_rectum,All,cases,3140
+2024,state,Washington,colon_rectum,All,deaths,1070
+2024,state,West Virginia,colon_rectum,All,cases,1070
+2024,state,West Virginia,colon_rectum,All,deaths,430
+2024,state,Wisconsin,colon_rectum,All,cases,2610
+2024,state,Wisconsin,colon_rectum,All,deaths,870
+2024,state,Wyoming,colon_rectum,All,cases,270
+2024,state,Wyoming,colon_rectum,All,deaths,110
