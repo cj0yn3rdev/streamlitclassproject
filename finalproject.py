@@ -809,57 +809,6 @@ with q5_right:
     st.plotly_chart(fig, use_container_width=True)
     st.markdown("<div class='footnote'>Q5 & Q6: Healthcare access distribution differs between developed and developing nations.</div>", unsafe_allow_html=True)
 
-# Treatment outcomes
-st.markdown("**Treatment Outcomes by Type** <span class='tag'>comparison</span>", unsafe_allow_html=True)
-
-treatment_outcomes = global_df.groupby('Treatment_Type').agg({
-    'Healthcare_Costs': 'mean',
-    'Tumor_Size_mm': 'mean',
-}).reset_index()
-
-col_t1, col_t2 = st.columns(2)
-
-with col_t1:
-    fig = px.bar(
-        treatment_outcomes.sort_values('Healthcare_Costs', ascending=True),
-        x='Healthcare_Costs',
-        y='Treatment_Type',
-        orientation='h',
-        template="simple_white",
-        color='Healthcare_Costs',
-        color_continuous_scale='Oranges',
-    )
-    fig.update_layout(
-        height=250,
-        margin=dict(l=10, r=10, t=28, b=10),
-        showlegend=False,
-        coloraxis_showscale=False,
-    )
-    fig.update_xaxes(title_text="Avg Healthcare Cost ($)", gridcolor="#e5e7eb")
-    fig.update_yaxes(title_text="")
-    st.plotly_chart(fig, use_container_width=True)
-
-with col_t2:
-    fig = px.bar(
-        treatment_outcomes.sort_values('Tumor_Size_mm', ascending=True),
-        x='Tumor_Size_mm',
-        y='Treatment_Type',
-        orientation='h',
-        template="simple_white",
-        color='Tumor_Size_mm',
-        color_continuous_scale='Purples',
-    )
-    fig.update_layout(
-        height=250,
-        margin=dict(l=10, r=10, t=28, b=10),
-        showlegend=False,
-        coloraxis_showscale=False,
-    )
-    fig.update_xaxes(title_text="Avg Tumor Size (mm)", gridcolor="#e5e7eb")
-    fig.update_yaxes(title_text="")
-    st.plotly_chart(fig, use_container_width=True)
-
-st.markdown("<div class='footnote'>Q6: Treatment costs and tumor sizes vary by treatment approach. Combination therapies show different cost profiles.</div>", unsafe_allow_html=True)
 
 # ============================================================
 # Dataset Information
