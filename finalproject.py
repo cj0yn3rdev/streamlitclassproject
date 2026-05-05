@@ -671,6 +671,130 @@ with q1_right:
     st.plotly_chart(fig, use_container_width=True)
     st.markdown("<div class='footnote'>Q1 & Q2: High-risk patients show elevated obesity scores (7.6 vs 3.0 for low-risk).</div>", unsafe_allow_html=True)
 
+# Early-Onset vs Traditional Comparison
+st.markdown("### Early-Onset (<50) vs Traditional (50+) Comparison")
+st.markdown("*Q2: How do patterns differ between early-onset and traditional colorectal cancer patients?*")
+
+# Create age category column
+global_df['age_category'] = global_df['Age'].apply(lambda x: '<50 (Early-Onset)' if x < 50 else '50+ (Traditional)')
+
+age_left, age_right = st.columns(2)
+
+with age_left:
+    st.markdown("**Key Metrics Comparison** <span class='tag'>grouped bar</span>", unsafe_allow_html=True)
+
+    # Compare metrics between age groups
+    early = global_df[global_df['Age'] < 50]
+    traditional = global_df[global_df['Age'] >= 50]
+
+    comparison_metrics = pd.DataFrame({
+        'Metric': ['Avg Tumor Size (mm)', 'Avg Healthcare Cost ($K)', 'Mortality Rate', 'Incidence Rate'],
+        '<50 (Early-Onset)': [
+            early['Tumor_Size_mm'].mean(),
+            early['Healthcare_Costs'].mean() / 1000,
+            early['Mortality_Rate_per_100K'].mean(),
+            early['Incidence_Rate_per_100K'].mean()
+        ],
+        '50+ (Traditional)': [
+            traditional['Tumor_Size_mm'].mean(),
+            traditional['Healthcare_Costs'].mean() / 1000,
+            traditional['Mortality_Rate_per_100K'].mean(),
+            traditional['Incidence_Rate_per_100K'].mean()
+        ]
+    })
+
+    comparison_melted = comparison_metrics.melt(id_vars='Metric', var_name='Age Group', value_name='Value')
+
+    fig = px.bar(
+        comparison_melted,
+        x='Metric',
+        y='Value',
+        color='Age Group',
+        barmode='group',
+        template="simple_white",
+        color_discrete_map={'<50 (Early-Onset)': '#f59e0b', '50+ (Traditional)': '#3b82f6'}
+    )
+    fig.update_layout(
+        height=380,
+        margin=dict(l=10, r=10, t=28, b=10),
+        legend_title_text="",
+    )
+    fig.update_yaxes(title_text="Value", gridcolor="#e5e7eb")
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown(f"<div class='footnote'>Early-onset: {len(early):,} patients | Traditional: {len(traditional):,} patients</div>", unsafe_allow_html=True)
+
+with age_right:
+    st.markdown("**Cancer Stage Distribution by Age Group** <span class='tag'>stacked bar</span>", unsafe_allow_html=True)
+
+    # Stage distribution comparison
+    stage_by_age = global_df.groupby(['age_category', 'Cancer_Stage']).size().reset_index(name='count')
+    totals = stage_by_age.groupby('age_category')['count'].transform('sum')
+    stage_by_age['percentage'] = (stage_by_age['count'] / totals * 100).round(1)
+
+    fig = px.bar(
+        stage_by_age,
+        x='age_category',
+        y='percentage',
+        color='Cancer_Stage',
+        template="simple_white",
+        color_discrete_map={'Localized': '#22c55e', 'Regional': '#f59e0b', 'Metastatic': '#ef4444'},
+        text='percentage'
+    )
+    fig.update_traces(texttemplate='%{text:.1f}%', textposition='inside')
+    fig.update_layout(
+        height=380,
+        margin=dict(l=10, r=10, t=28, b=10),
+        legend_title_text="Stage",
+        barmode='stack',
+    )
+    fig.update_xaxes(title_text="Age Group")
+    fig.update_yaxes(title_text="Percentage (%)", gridcolor="#e5e7eb")
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q2: Comparing stage at diagnosis between early-onset and traditional patients.</div>", unsafe_allow_html=True)
+
+# Risk factors comparison between age groups
+st.markdown("**Risk Factor Prevalence by Age Group** <span class='tag'>comparison</span>", unsafe_allow_html=True)
+
+risk_comparison = pd.DataFrame({
+    'Risk Factor': ['Family History', 'Smoking History', 'Obesity/Overweight', 'Diabetes', 'IBD', 'Genetic Mutation'],
+    '<50 (Early-Onset)': [
+        (early['Family_History'] == 'Yes').mean() * 100,
+        (early['Smoking_History'] == 'Yes').mean() * 100,
+        (early['Obesity_BMI'].isin(['Overweight', 'Obese'])).mean() * 100,
+        (early['Diabetes'] == 'Yes').mean() * 100,
+        (early['Inflammatory_Bowel_Disease'] == 'Yes').mean() * 100,
+        (early['Genetic_Mutation'] == 'Yes').mean() * 100,
+    ],
+    '50+ (Traditional)': [
+        (traditional['Family_History'] == 'Yes').mean() * 100,
+        (traditional['Smoking_History'] == 'Yes').mean() * 100,
+        (traditional['Obesity_BMI'].isin(['Overweight', 'Obese'])).mean() * 100,
+        (traditional['Diabetes'] == 'Yes').mean() * 100,
+        (traditional['Inflammatory_Bowel_Disease'] == 'Yes').mean() * 100,
+        (traditional['Genetic_Mutation'] == 'Yes').mean() * 100,
+    ]
+})
+
+risk_melted = risk_comparison.melt(id_vars='Risk Factor', var_name='Age Group', value_name='Prevalence (%)')
+
+fig = px.bar(
+    risk_melted,
+    x='Risk Factor',
+    y='Prevalence (%)',
+    color='Age Group',
+    barmode='group',
+    template="simple_white",
+    color_discrete_map={'<50 (Early-Onset)': '#f59e0b', '50+ (Traditional)': '#3b82f6'}
+)
+fig.update_layout(
+    height=350,
+    margin=dict(l=10, r=10, t=28, b=10),
+    legend_title_text="",
+)
+fig.update_yaxes(title_text="Prevalence (%)", gridcolor="#e5e7eb")
+st.plotly_chart(fig, use_container_width=True)
+st.markdown("<div class='footnote'>Q2: Risk factor prevalence comparison reveals differences in patient profiles between age groups.</div>", unsafe_allow_html=True)
+
 # Q3: Patient Subgroups Analysis
 st.markdown("### Q3: Early-Onset Patient Subgroups")
 st.markdown("*Are there distinct subgroups among patients under 50 based on their characteristics?*")
