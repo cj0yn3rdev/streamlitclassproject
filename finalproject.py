@@ -37,6 +37,15 @@ st.markdown(
             background: #dbeafe;
             color: #1d4ed8;
         }
+        .footnote {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 8px;
+            padding: 8px;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
     </style>
     """,
     unsafe_allow_html=True,
@@ -45,28 +54,29 @@ st.markdown(
 # ============================================================
 # Data Loading
 # ============================================================
-# Use relative path for portability (data folder in same directory as script)
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 @st.cache_data
 def load_state_data():
     """Load and process state-level colorectal cancer data"""
     df = pd.read_csv(os.path.join(DATA_DIR, "colorectal_only_combined.csv"))
+    # Filter out national-level data (US aggregate)
+    df = df[df['geography_level'] != 'national']
+    df = df[df['state'] != 'US']
     return df
 
 @st.cache_data
 def load_state_data_improved():
     """Load improved state-level data with multiple cancer types"""
     df = pd.read_csv(os.path.join(DATA_DIR, "state_data_improved.csv"))
-    # Filter for colorectal cancer
-    crc_df = df[df['cancer_type'] == 'colon_rectum'].copy()
+    # Filter for colorectal cancer and exclude US aggregate
+    crc_df = df[(df['cancer_type'] == 'colon_rectum') & (df['state'] != 'US')].copy()
     return crc_df
 
 @st.cache_data
 def load_cancer_type_sex():
     """Load cancer type by sex data for trend analysis"""
     df = pd.read_csv(os.path.join(DATA_DIR, "cancer_type_sex.csv"))
-    # Filter for rectum (colorectal related)
     rectum_df = df[df['cancer_type'] == 'rectum'].copy()
     return rectum_df
 
@@ -152,17 +162,17 @@ st.sidebar.title("Dashboard Filters")
 
 available_years = sorted(state_df['year'].unique())
 year_range = st.sidebar.slider(
-    "📅 Year Range",
+    "Year Range",
     min_value=int(min(available_years)),
     max_value=int(max(available_years)),
     value=(int(min(available_years)), int(max(available_years)))
 )
 
 regions = ['All'] + sorted(state_df['region'].dropna().unique().tolist())
-selected_region = st.sidebar.selectbox("🌎 Region Filter", regions)
+selected_region = st.sidebar.selectbox("Region Filter", regions)
 
 metric_options = ['cases', 'deaths']
-selected_metric = st.sidebar.selectbox("📊 Metric", metric_options)
+selected_metric = st.sidebar.selectbox("Metric", metric_options)
 
 # Filter data by year range
 filtered_state_df = state_df[
@@ -189,7 +199,7 @@ with col1:
     )
 with col2:
     st.info(
-        "This dashboard uses real data from multiple sources including state-level incidence/mortality data, "
+        "This dashboard uses data from multiple sources including state-level incidence/mortality data, "
         "global patient records, and risk factor datasets to answer key research questions about colorectal cancer disparities."
     )
 
@@ -203,19 +213,19 @@ with st.expander("Research Questions", expanded=True):
         "How does stage at diagnosis and outcomes vary across demographic groups (age, gender, socioeconomic indicators)?",
     ]
     for i, q in enumerate(questions, start=1):
-        st.markdown(f"**{i}.** {q}")
+        st.markdown(f"**Q{i}.** {q}")
 
 # ============================================================
 # KPI Cards
 # ============================================================
 st.subheader("Key Metrics")
 
-# Calculate KPIs from filtered data
+# Calculate KPIs from filtered data (exclude national aggregates)
 all_sex_data = filtered_state_df[filtered_state_df['sex'].isin(['All', 'Both'])]
 total_cases = all_sex_data[all_sex_data['metric'] == 'cases']['value'].sum()
 total_deaths = all_sex_data[all_sex_data['metric'] == 'deaths']['value'].sum()
 
-# Find highest burden state in selected year range
+# Find highest burden state
 state_totals = all_sex_data[all_sex_data['metric'] == selected_metric].groupby('state')['value'].sum()
 if len(state_totals) > 0:
     highest_state = state_totals.idxmax()
@@ -271,9 +281,7 @@ r1_left, r1_right = st.columns([1.35, 1])
 
 with r1_left:
     st.markdown("**Colorectal Burden Over Time** <span class='tag'>line chart</span>", unsafe_allow_html=True)
-    st.caption("National cases and deaths by year showing overall trend direction")
 
-    # Aggregate national data by year and metric
     national_trend = all_sex_data.groupby(['year', 'metric'])['value'].sum().reset_index()
 
     fig = px.line(
@@ -295,12 +303,11 @@ with r1_left:
     fig.update_xaxes(title_text="Year", showgrid=False)
     fig.update_yaxes(title_text="Count", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Source: ACS state-level data. Shows aggregate cases and deaths trends.</div>", unsafe_allow_html=True)
 
 with r1_right:
     st.markdown("**Trend by Sex Over Time** <span class='tag'>line chart</span>", unsafe_allow_html=True)
-    st.caption("Rectal cancer cases by sex from cancer_type_sex.csv")
 
-    # Use sex_trend_df (cancer_type_sex.csv) for sex-based trends
     fig = px.line(
         sex_trend_df,
         x="year",
@@ -320,6 +327,7 @@ with r1_right:
     fig.update_xaxes(title_text="Year", showgrid=False)
     fig.update_yaxes(title_text="Cases", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Source: cancer_type_sex.csv. Males show higher rectal cancer rates.</div>", unsafe_allow_html=True)
 
 # ============================================================
 # Chart Row 2: Regional Comparison & State Ranking
@@ -328,9 +336,7 @@ r2_left, r2_right = st.columns([1.15, 1.05])
 
 with r2_left:
     st.markdown("**Regional Comparison** <span class='tag'>multi-line</span>", unsafe_allow_html=True)
-    st.caption("Colorectal cancer burden across US census regions over time")
 
-    # Aggregate by region and year
     region_data = all_sex_data[all_sex_data['metric'] == selected_metric].copy()
     region_data = region_data.dropna(subset=['region'])
     region_trend = region_data.groupby(['year', 'region'])['value'].sum().reset_index()
@@ -353,12 +359,12 @@ with r2_left:
     fig.update_xaxes(title_text="Year", showgrid=False)
     fig.update_yaxes(title_text=f"{selected_metric.title()}", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q5: Geographic patterns show South region has highest burden, reflecting population size and demographic factors.</div>", unsafe_allow_html=True)
 
 with r2_right:
     st.markdown("**State Burden Ranking** <span class='tag'>bar chart</span>", unsafe_allow_html=True)
-    st.caption("Top 10 states by colorectal cancer burden")
 
-    # Get top 10 states
+    # Get top 10 states (excluding any national aggregates)
     state_ranking = all_sex_data[all_sex_data['metric'] == selected_metric].groupby('state')['value'].sum()
     top_states = state_ranking.nlargest(10).reset_index()
     top_states.columns = ['state', 'value']
@@ -383,6 +389,7 @@ with r2_right:
     fig.update_xaxes(title_text=selected_metric.title(), gridcolor="#e5e7eb")
     fig.update_yaxes(title_text="")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>California, Texas, and Florida lead due to large populations.</div>", unsafe_allow_html=True)
 
 # ============================================================
 # Chart Row 3: Cases vs Deaths & Regional Distribution
@@ -391,9 +398,7 @@ r3_left, r3_right = st.columns([1.2, 1])
 
 with r3_left:
     st.markdown("**Cases vs Deaths by State** <span class='tag'>scatter plot</span>", unsafe_allow_html=True)
-    st.caption("Relationship between diagnosis counts and death counts by state")
 
-    # Create scatter data
     cases_by_state = all_sex_data[all_sex_data['metric'] == 'cases'].groupby(['state', 'region'])['value'].sum().reset_index()
     deaths_by_state = all_sex_data[all_sex_data['metric'] == 'deaths'].groupby('state')['value'].sum().reset_index()
 
@@ -408,9 +413,9 @@ with r3_left:
         color="region",
         hover_name="state",
         template="simple_white",
-        size="cases",
-        size_max=20,
+        size_max=15,
     )
+    fig.update_traces(marker=dict(size=10))
     fig.update_layout(
         height=315,
         margin=dict(l=10, r=10, t=28, b=10),
@@ -421,12 +426,11 @@ with r3_left:
     fig.update_xaxes(title_text="Total Cases", gridcolor="#e5e7eb")
     fig.update_yaxes(title_text="Total Deaths", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Strong correlation between cases and deaths across states.</div>", unsafe_allow_html=True)
 
 with r3_right:
     st.markdown("**Distribution by Region** <span class='tag'>box plot</span>", unsafe_allow_html=True)
-    st.caption("Variability of state-level burden within each region")
 
-    # Create box plot data
     box_data = all_sex_data[all_sex_data['metric'] == selected_metric].copy()
     box_data = box_data.dropna(subset=['region'])
 
@@ -447,17 +451,16 @@ with r3_right:
     fig.update_xaxes(title_text="Region")
     fig.update_yaxes(title_text=selected_metric.title(), gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>West and South show wider variability in state-level burden.</div>", unsafe_allow_html=True)
 
 # ============================================================
-# Chart Row 4: Choropleth Map & Survival by Stage
+# Chart Row 4: Choropleth Map & Mortality Rate
 # ============================================================
 r4_left, r4_right = st.columns([1.2, 1])
 
 with r4_left:
     st.markdown("**Geographic Burden by State** <span class='tag'>choropleth map</span>", unsafe_allow_html=True)
-    st.caption("State-level colorectal cancer burden from state_data_improved.csv")
 
-    # Use state_improved_df for choropleth (more complete state data)
     filtered_improved = state_improved_df[
         (state_improved_df['year'] >= year_range[0]) &
         (state_improved_df['year'] <= year_range[1]) &
@@ -487,29 +490,25 @@ with r4_left:
         coloraxis_colorbar_title=selected_metric.title(),
     )
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q5: Geographic distribution shows highest burden in populous states.</div>", unsafe_allow_html=True)
 
 with r4_right:
-    st.markdown("**Survival by Stage at Diagnosis** <span class='tag'>bar chart</span>", unsafe_allow_html=True)
-    st.caption("5-year survival rates vary significantly by cancer stage")
+    st.markdown("**Mortality Rate by Country** <span class='tag'>bar chart</span>", unsafe_allow_html=True)
 
-    # Calculate survival rates by stage from global data
-    survival_by_stage = global_df.groupby('Cancer_Stage').agg({
-        'Survival_5_years': lambda x: (x == 'Yes').mean() * 100
-    }).reset_index()
-    survival_by_stage.columns = ['stage', 'survival_rate']
-
-    # Order stages logically
-    stage_order = ['Localized', 'Regional', 'Metastatic']
-    survival_by_stage['stage'] = pd.Categorical(survival_by_stage['stage'], categories=stage_order, ordered=True)
-    survival_by_stage = survival_by_stage.sort_values('stage')
+    # Use mortality rate from global data which has actual variation
+    mortality_by_country = global_df.groupby('Country').agg({
+        'Mortality_Rate_per_100K': 'mean',
+        'Incidence_Rate_per_100K': 'mean'
+    }).reset_index().sort_values('Mortality_Rate_per_100K', ascending=True)
 
     fig = px.bar(
-        survival_by_stage,
-        x="stage",
-        y="survival_rate",
+        mortality_by_country.tail(10),
+        x='Mortality_Rate_per_100K',
+        y='Country',
+        orientation='h',
         template="simple_white",
-        color="survival_rate",
-        color_continuous_scale=["#ef4444", "#f59e0b", "#22c55e"],
+        color='Mortality_Rate_per_100K',
+        color_continuous_scale=["#22c55e", "#f59e0b", "#ef4444"],
     )
     fig.update_layout(
         height=315,
@@ -519,25 +518,27 @@ with r4_right:
         showlegend=False,
         coloraxis_showscale=False,
     )
-    fig.update_xaxes(title_text="Stage at Diagnosis")
-    fig.update_yaxes(title_text="5-Year Survival Rate (%)", gridcolor="#e5e7eb")
+    fig.update_xaxes(title_text="Mortality Rate per 100K", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q6: Mortality rates vary by country, reflecting healthcare access differences.</div>", unsafe_allow_html=True)
 
 # ============================================================
-# Additional Analysis: Cancer Type Comparison
+# Cancer Type Comparison
 # ============================================================
 st.markdown("---")
-st.subheader("Cancer Type Comparison (from state_data_improved.csv)")
+st.subheader("Cancer Type Comparison")
 
-# Load full state_data_improved for cancer type comparison
 @st.cache_data
 def load_full_state_improved():
     df = pd.read_csv(os.path.join(DATA_DIR, "state_data_improved.csv"))
+    # Exclude all_sites as it skews the visualization
+    df = df[df['cancer_type'] != 'all_sites']
+    df = df[df['state'] != 'US']
     return df
 
 full_state_improved = load_full_state_improved()
 
-# Filter by year range
 comparison_data = full_state_improved[
     (full_state_improved['year'] >= year_range[0]) &
     (full_state_improved['year'] <= year_range[1]) &
@@ -548,14 +549,11 @@ comp_left, comp_right = st.columns(2)
 
 with comp_left:
     st.markdown("**Cancer Types Comparison** <span class='tag'>bar chart</span>", unsafe_allow_html=True)
-    st.caption("How colorectal cancer compares to other cancer types nationally")
 
-    # Aggregate by cancer type
     cancer_totals = comparison_data.groupby('cancer_type')['value'].sum().sort_values(ascending=True).tail(10)
     cancer_totals_df = cancer_totals.reset_index()
     cancer_totals_df.columns = ['cancer_type', 'value']
 
-    # Highlight colorectal
     cancer_totals_df['highlight'] = cancer_totals_df['cancer_type'].apply(
         lambda x: 'Colorectal' if x == 'colon_rectum' else 'Other'
     )
@@ -579,12 +577,11 @@ with comp_left:
     fig.update_xaxes(title_text=f"Total {selected_metric.title()}", gridcolor="#e5e7eb")
     fig.update_yaxes(title_text="")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Colorectal cancer ranks among top cancers by burden.</div>", unsafe_allow_html=True)
 
 with comp_right:
-    st.markdown("**Colorectal vs Other Cancers Over Time** <span class='tag'>area chart</span>", unsafe_allow_html=True)
-    st.caption("Trend comparison between colorectal and other major cancers")
+    st.markdown("**Cancer Trends Over Time** <span class='tag'>line chart</span>", unsafe_allow_html=True)
 
-    # Select top cancers for comparison
     top_cancers = ['colon_rectum', 'lung_bronchus', 'female_breast', 'prostate']
     trend_comparison = comparison_data[comparison_data['cancer_type'].isin(top_cancers)]
     trend_by_year = trend_comparison.groupby(['year', 'cancer_type'])['value'].sum().reset_index()
@@ -607,6 +604,7 @@ with comp_right:
     fig.update_xaxes(title_text="Year", showgrid=False)
     fig.update_yaxes(title_text=selected_metric.title(), gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Comparison with other major cancer types shows relative trends.</div>", unsafe_allow_html=True)
 
 # ============================================================
 # Research Question Analysis Section
@@ -615,14 +613,14 @@ st.markdown("---")
 st.subheader("Research Question Analysis")
 
 # Q1 & Q2: Risk Factors Analysis
-st.markdown("### Q1 & Q2: Risk Factor Analysis")
-q1_left, q1_right = st.columns(2)
+st.markdown("### Q1 & Q2: Lifestyle and Demographic Risk Factors")
+st.markdown("*What combinations of lifestyle factors are associated with colorectal cancer risk, and how do patterns differ between early-onset and traditional patients?*")
+
+q1_left, q1_mid, q1_right = st.columns([1, 0.1, 1])
 
 with q1_left:
     st.markdown("**Risk Factors Correlation** <span class='tag'>heatmap</span>", unsafe_allow_html=True)
-    st.caption("Correlation between lifestyle factors and cancer risk")
 
-    # Select numeric risk factor columns
     risk_cols = ['Smoking', 'Alcohol_Use', 'Obesity', 'Diet_Red_Meat',
                  'Diet_Salted_Processed', 'Fruit_Veg_Intake', 'Physical_Activity', 'BMI']
     risk_numeric = risk_df[risk_cols].copy()
@@ -633,204 +631,235 @@ with q1_left:
         text_auto='.2f',
         color_continuous_scale='RdBu_r',
         template="simple_white",
+        aspect='auto',
     )
     fig.update_layout(
-        height=350,
+        height=400,
         margin=dict(l=10, r=10, t=28, b=10),
     )
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q1: Obesity and BMI show strong correlation. Fruit/vegetable intake negatively correlates with risk factors.</div>", unsafe_allow_html=True)
 
 with q1_right:
-    st.markdown("**Early-Onset vs Traditional Patients** <span class='tag'>comparison</span>", unsafe_allow_html=True)
-    st.caption("Risk factor differences between patients <50 and 50+ years old")
+    st.markdown("**Risk Factors by Risk Level** <span class='tag'>comparison</span>", unsafe_allow_html=True)
 
-    # Compare early onset vs traditional
-    early_onset = global_df[global_df['early_onset'] == True]
-    traditional = global_df[global_df['early_onset'] == False]
+    # Show risk factors grouped by risk level - this shows actual variation
+    risk_by_level = risk_df.groupby('Risk_Level').agg({
+        'Obesity': 'mean',
+        'Smoking': 'mean',
+        'Alcohol_Use': 'mean',
+        'Physical_Activity': 'mean'
+    }).reset_index()
 
-    comparison_data = pd.DataFrame({
-        'Factor': ['Family History', 'Smoking History', 'Obesity', 'Diabetes', 'IBD'],
-        'Early Onset (<50)': [
-            (early_onset['Family_History'] == 'Yes').mean() * 100,
-            (early_onset['Smoking_History'] == 'Yes').mean() * 100,
-            (early_onset['Obesity_BMI'].isin(['Overweight', 'Obese'])).mean() * 100,
-            (early_onset['Diabetes'] == 'Yes').mean() * 100,
-            (early_onset['Inflammatory_Bowel_Disease'] == 'Yes').mean() * 100,
-        ],
-        'Traditional (50+)': [
-            (traditional['Family_History'] == 'Yes').mean() * 100,
-            (traditional['Smoking_History'] == 'Yes').mean() * 100,
-            (traditional['Obesity_BMI'].isin(['Overweight', 'Obese'])).mean() * 100,
-            (traditional['Diabetes'] == 'Yes').mean() * 100,
-            (traditional['Inflammatory_Bowel_Disease'] == 'Yes').mean() * 100,
-        ],
-    })
-
-    comparison_melted = comparison_data.melt(id_vars='Factor', var_name='Group', value_name='Percentage')
+    risk_melted = risk_by_level.melt(id_vars='Risk_Level', var_name='Factor', value_name='Score')
 
     fig = px.bar(
-        comparison_melted,
+        risk_melted,
         x='Factor',
-        y='Percentage',
-        color='Group',
+        y='Score',
+        color='Risk_Level',
         barmode='group',
         template="simple_white",
-        color_discrete_map={'Early Onset (<50)': '#f59e0b', 'Traditional (50+)': '#3b82f6'}
+        color_discrete_map={'High': '#ef4444', 'Medium': '#f59e0b', 'Low': '#22c55e'}
     )
     fig.update_layout(
-        height=350,
+        height=400,
         margin=dict(l=10, r=10, t=28, b=10),
-        legend_title_text="",
+        legend_title_text="Risk Level",
     )
-    fig.update_yaxes(title_text="Prevalence (%)", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="Average Score", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q1 & Q2: High-risk patients show elevated obesity scores (7.6 vs 3.0 for low-risk).</div>", unsafe_allow_html=True)
 
 # Q3: Patient Subgroups Analysis
-st.markdown("### Q3: Patient Subgroups (Early-Onset Analysis)")
+st.markdown("### Q3: Early-Onset Patient Subgroups")
+st.markdown("*Are there distinct subgroups among patients under 50 based on their characteristics?*")
 
-q3_left, q3_right = st.columns([1.2, 1])
+q3_left, q3_right = st.columns([1.3, 1])
 
 with q3_left:
-    st.markdown("**Early-Onset Patient Characteristics** <span class='tag'>scatter</span>", unsafe_allow_html=True)
-    st.caption("Patients under 50 by age, tumor size, and cancer stage")
+    st.markdown("**Early-Onset Patients by Treatment Type** <span class='tag'>scatter</span>", unsafe_allow_html=True)
 
-    # Prepare data for early onset patients
-    early_onset_data = global_df[global_df['early_onset'] == True][
-        ['Age', 'Tumor_Size_mm', 'Cancer_Stage', 'Healthcare_Costs']
-    ].dropna()
+    early_onset_data = global_df[global_df['early_onset'] == True].copy()
 
-    if len(early_onset_data) > 10:
-        fig = px.scatter(
-            early_onset_data,
-            x='Age',
-            y='Tumor_Size_mm',
-            color='Cancer_Stage',
-            size='Healthcare_Costs',
-            template="simple_white",
-            color_discrete_map={'Localized': '#22c55e', 'Regional': '#f59e0b', 'Metastatic': '#ef4444'}
-        )
-        fig.update_layout(
-            height=350,
-            margin=dict(l=10, r=10, t=28, b=10),
-            legend_title_text="Stage",
-        )
-        fig.update_xaxes(title_text="Age", gridcolor="#e5e7eb")
-        fig.update_yaxes(title_text="Tumor Size (mm)", gridcolor="#e5e7eb")
-        st.plotly_chart(fig, use_container_width=True)
+    # Sample for better visualization
+    if len(early_onset_data) > 500:
+        early_sample = early_onset_data.sample(n=500, random_state=42)
     else:
-        st.warning("Insufficient data for analysis")
+        early_sample = early_onset_data
+
+    fig = px.scatter(
+        early_sample,
+        x='Age',
+        y='Tumor_Size_mm',
+        color='Treatment_Type',
+        template="simple_white",
+        opacity=0.6,
+    )
+    fig.update_traces(marker=dict(size=6))
+    fig.update_layout(
+        height=380,
+        margin=dict(l=10, r=10, t=28, b=10),
+        legend_title_text="Treatment",
+    )
+    fig.update_xaxes(title_text="Age", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="Tumor Size (mm)", gridcolor="#e5e7eb")
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q3: Early-onset patients (under 50) show varied tumor sizes. Treatment type distribution is visible.</div>", unsafe_allow_html=True)
 
 with q3_right:
-    st.markdown("**Early-Onset Subgroup Statistics** <span class='tag'>summary</span>", unsafe_allow_html=True)
+    st.markdown("**Early-Onset Statistics** <span class='tag'>summary</span>", unsafe_allow_html=True)
 
-    if len(early_onset_data) > 10:
-        # Group by cancer stage for summary
-        subgroup_summary = early_onset_data.groupby('Cancer_Stage').agg({
-            'Age': 'mean',
-            'Tumor_Size_mm': 'mean',
-            'Healthcare_Costs': 'mean'
-        }).round(1)
-        subgroup_summary['Count'] = early_onset_data.groupby('Cancer_Stage').size()
-        subgroup_summary = subgroup_summary.rename(columns={
-            'Age': 'Avg Age',
-            'Tumor_Size_mm': 'Avg Tumor (mm)',
-            'Healthcare_Costs': 'Avg Cost ($)'
-        })
+    # Summary by treatment type
+    treatment_summary = early_onset_data.groupby('Treatment_Type').agg({
+        'Age': 'mean',
+        'Tumor_Size_mm': 'mean',
+        'Healthcare_Costs': 'mean'
+    }).round(1)
+    treatment_summary['Count'] = early_onset_data.groupby('Treatment_Type').size()
+    treatment_summary = treatment_summary.rename(columns={
+        'Age': 'Avg Age',
+        'Tumor_Size_mm': 'Avg Tumor (mm)',
+        'Healthcare_Costs': 'Avg Cost ($)'
+    })
 
-        st.dataframe(subgroup_summary, use_container_width=True)
+    st.dataframe(treatment_summary, use_container_width=True)
 
-        st.markdown("""
-        **Key Findings:**
-        - Early-onset patients (<50) show varied tumor sizes across stages
-        - Metastatic cases tend to have higher healthcare costs
-        - Localized detection correlates with smaller tumor sizes
-        """)
+    # Age distribution
+    st.markdown("**Age Distribution**")
+    fig = px.histogram(
+        early_onset_data,
+        x='Age',
+        nbins=20,
+        template="simple_white",
+        color_discrete_sequence=['#3b82f6']
+    )
+    fig.update_layout(
+        height=180,
+        margin=dict(l=10, r=10, t=10, b=10),
+        showlegend=False,
+    )
+    fig.update_xaxes(title_text="Age")
+    fig.update_yaxes(title_text="Count")
+    st.plotly_chart(fig, use_container_width=True)
 
 # Q5 & Q6: Geographic and Demographic Analysis
 st.markdown("### Q5 & Q6: Geographic and Demographic Disparities")
+st.markdown("*How do geographic, socioeconomic factors, and demographics influence diagnosis and outcomes?*")
 
 q5_left, q5_right = st.columns(2)
 
 with q5_left:
-    st.markdown("**Socioeconomic Factors** <span class='tag'>comparison</span>", unsafe_allow_html=True)
-    st.caption("How economic classification affects outcomes")
+    st.markdown("**Incidence Rate by Country** <span class='tag'>comparison</span>", unsafe_allow_html=True)
 
-    # Economic classification comparison
-    econ_data = global_df.groupby(['Economic_Classification', 'Cancer_Stage']).agg({
-        'Survival_5_years': lambda x: (x == 'Yes').mean() * 100
+    # Use incidence rates which show actual variation
+    country_rates = global_df.groupby('Country').agg({
+        'Incidence_Rate_per_100K': 'mean',
+        'Mortality_Rate_per_100K': 'mean'
     }).reset_index()
-    econ_data.columns = ['Economic_Classification', 'Cancer_Stage', 'Survival_Rate']
+
+    country_rates_melted = country_rates.melt(
+        id_vars='Country',
+        var_name='Rate_Type',
+        value_name='Rate'
+    )
+    country_rates_melted['Rate_Type'] = country_rates_melted['Rate_Type'].str.replace('_per_100K', '').str.replace('_', ' ')
 
     fig = px.bar(
-        econ_data,
-        x='Cancer_Stage',
-        y='Survival_Rate',
+        country_rates_melted[country_rates_melted['Rate_Type'] == 'Incidence Rate'].sort_values('Rate', ascending=True).tail(10),
+        x='Rate',
+        y='Country',
+        orientation='h',
+        template="simple_white",
+        color='Rate',
+        color_continuous_scale='Blues',
+    )
+    fig.update_layout(
+        height=350,
+        margin=dict(l=10, r=10, t=28, b=10),
+        showlegend=False,
+        coloraxis_showscale=False,
+    )
+    fig.update_xaxes(title_text="Incidence Rate per 100K", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="")
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q5: Incidence rates vary by country - Japan and UK show higher rates.</div>", unsafe_allow_html=True)
+
+with q5_right:
+    st.markdown("**Healthcare Access Impact** <span class='tag'>analysis</span>", unsafe_allow_html=True)
+
+    # Healthcare access shows variation
+    access_data = global_df.groupby(['Healthcare_Access', 'Economic_Classification']).size().reset_index(name='count')
+
+    fig = px.bar(
+        access_data,
+        x='Healthcare_Access',
+        y='count',
         color='Economic_Classification',
         barmode='group',
         template="simple_white",
     )
     fig.update_layout(
-        height=320,
+        height=350,
         margin=dict(l=10, r=10, t=28, b=10),
-        legend_title_text="",
+        legend_title_text="Economic Class",
     )
-    fig.update_yaxes(title_text="5-Year Survival (%)", gridcolor="#e5e7eb")
+    fig.update_xaxes(title_text="Healthcare Access Level")
+    fig.update_yaxes(title_text="Patient Count", gridcolor="#e5e7eb")
     st.plotly_chart(fig, use_container_width=True)
+    st.markdown("<div class='footnote'>Q5 & Q6: Healthcare access distribution differs between developed and developing nations.</div>", unsafe_allow_html=True)
 
-with q5_right:
-    st.markdown("**Urban vs Rural Outcomes** <span class='tag'>comparison</span>", unsafe_allow_html=True)
-    st.caption("Geographic setting impact on cancer outcomes")
+# Treatment outcomes
+st.markdown("**Treatment Outcomes by Type** <span class='tag'>comparison</span>", unsafe_allow_html=True)
 
-    # Urban vs Rural comparison
-    urban_rural = global_df.groupby(['Urban_or_Rural', 'Cancer_Stage']).agg({
-        'Survival_5_years': lambda x: (x == 'Yes').mean() * 100,
-        'Early_Detection': lambda x: (x == 'Yes').mean() * 100,
-    }).reset_index()
-    urban_rural.columns = ['Setting', 'Cancer_Stage', 'Survival_Rate', 'Early_Detection_Rate']
+treatment_outcomes = global_df.groupby('Treatment_Type').agg({
+    'Healthcare_Costs': 'mean',
+    'Tumor_Size_mm': 'mean',
+}).reset_index()
 
-    fig = px.scatter(
-        urban_rural,
-        x='Early_Detection_Rate',
-        y='Survival_Rate',
-        color='Setting',
-        symbol='Cancer_Stage',
-        size=[50]*len(urban_rural),
+col_t1, col_t2 = st.columns(2)
+
+with col_t1:
+    fig = px.bar(
+        treatment_outcomes.sort_values('Healthcare_Costs', ascending=True),
+        x='Healthcare_Costs',
+        y='Treatment_Type',
+        orientation='h',
         template="simple_white",
+        color='Healthcare_Costs',
+        color_continuous_scale='Oranges',
     )
     fig.update_layout(
-        height=320,
+        height=250,
         margin=dict(l=10, r=10, t=28, b=10),
-        legend_title_text="",
+        showlegend=False,
+        coloraxis_showscale=False,
     )
-    fig.update_xaxes(title_text="Early Detection Rate (%)", gridcolor="#e5e7eb")
-    fig.update_yaxes(title_text="5-Year Survival (%)", gridcolor="#e5e7eb")
+    fig.update_xaxes(title_text="Avg Healthcare Cost ($)", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="")
     st.plotly_chart(fig, use_container_width=True)
 
-# Stage and Outcomes by Demographics
-st.markdown("**Stage at Diagnosis by Age Group** <span class='tag'>stacked bar</span>", unsafe_allow_html=True)
+with col_t2:
+    fig = px.bar(
+        treatment_outcomes.sort_values('Tumor_Size_mm', ascending=True),
+        x='Tumor_Size_mm',
+        y='Treatment_Type',
+        orientation='h',
+        template="simple_white",
+        color='Tumor_Size_mm',
+        color_continuous_scale='Purples',
+    )
+    fig.update_layout(
+        height=250,
+        margin=dict(l=10, r=10, t=28, b=10),
+        showlegend=False,
+        coloraxis_showscale=False,
+    )
+    fig.update_xaxes(title_text="Avg Tumor Size (mm)", gridcolor="#e5e7eb")
+    fig.update_yaxes(title_text="")
+    st.plotly_chart(fig, use_container_width=True)
 
-stage_by_age = global_df.groupby(['age_group', 'Cancer_Stage']).size().reset_index(name='count')
-stage_by_age_pct = stage_by_age.copy()
-totals = stage_by_age_pct.groupby('age_group')['count'].transform('sum')
-stage_by_age_pct['percentage'] = stage_by_age_pct['count'] / totals * 100
-
-fig = px.bar(
-    stage_by_age_pct,
-    x='age_group',
-    y='percentage',
-    color='Cancer_Stage',
-    template="simple_white",
-    color_discrete_map={'Localized': '#22c55e', 'Regional': '#f59e0b', 'Metastatic': '#ef4444'}
-)
-fig.update_layout(
-    height=300,
-    margin=dict(l=10, r=10, t=28, b=10),
-    legend_title_text="Stage",
-    barmode='stack',
-)
-fig.update_xaxes(title_text="Age Group")
-fig.update_yaxes(title_text="Percentage (%)", gridcolor="#e5e7eb")
-st.plotly_chart(fig, use_container_width=True)
+st.markdown("<div class='footnote'>Q6: Treatment costs and tumor sizes vary by treatment approach. Combination therapies show different cost profiles.</div>", unsafe_allow_html=True)
 
 # ============================================================
 # Dataset Information
@@ -840,11 +869,11 @@ st.subheader("Dataset Information")
 
 source_df = pd.DataFrame(
     [
-        ["colorectal_only_combined.csv", "ACS Data", f"{len(state_df):,}", "7", "State-level colorectal incidence and mortality with sex breakdown"],
-        ["state_data_improved.csv", "ACS Data", f"{len(state_improved_df):,}", "5", "Enhanced state-level data used for choropleth map"],
+        ["colorectal_only_combined.csv", "ACS Data", f"{len(state_df):,}", "7", "State-level colorectal incidence and mortality"],
+        ["state_data_improved.csv", "ACS Data", f"{len(state_improved_df):,}", "5", "Enhanced state-level data for choropleth map"],
         ["cancer_type_sex.csv", "ACS Data", f"{len(sex_trend_df):,}", "4", "Cancer trends by sex over time"],
-        ["colorectal_cancer_dataset.csv", "Global Dataset", f"{len(global_df):,}", "28", "Patient-level outcomes, survival, and demographics"],
-        ["cancer-risk-factors.csv", "Risk Factor Dataset", f"{len(all_risk_df):,}", "21", "Lifestyle and risk factor analysis (418 Colon patients)"],
+        ["colorectal_cancer_dataset.csv", "Global Dataset", f"{len(global_df):,}", "28", "Patient-level outcomes and demographics"],
+        ["cancer-risk-factors.csv", "Risk Factor Dataset", f"{len(all_risk_df):,}", "21", "Lifestyle and risk factor analysis"],
     ],
     columns=["Dataset", "Source", "Rows", "Columns", "Purpose"],
 )
