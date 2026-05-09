@@ -1,0 +1,13 @@
+risk_factor,direction,relative_risk,ci_lower,ci_upper,exposure_unit,evidence_grade,source
+Processed meat,Increases,1.18,1.10,1.28,per 50g/day,Convincing,WCRF/AICR 2018
+Red meat,Increases,1.12,1.04,1.21,per 100g/day,Probable,WCRF/AICR 2018
+Alcohol consumption,Increases,1.07,1.05,1.10,per 10g/day ethanol,Convincing,WCRF/AICR 2018
+Body fatness (BMI),Increases,1.05,1.03,1.07,per 5 kg/m2,Convincing,WCRF/AICR 2018
+Adult attained height,Increases,1.04,1.02,1.06,per 5cm,Convincing,WCRF/AICR 2018
+Smoking (current),Increases,1.18,1.11,1.25,vs never smoker,Convincing,IARC 2009 / Liang 2009
+Type 2 diabetes,Increases,1.27,1.21,1.34,vs no diabetes,Probable,Larsson 2005
+Physical activity,Decreases,0.80,0.72,0.88,active vs inactive,Convincing,WCRF/AICR 2018
+Whole grains,Decreases,0.83,0.78,0.89,per 90g/day,Convincing,WCRF/AICR 2018
+Dietary fiber,Decreases,0.90,0.86,0.94,per 10g/day,Convincing,WCRF/AICR 2018
+Dairy products,Decreases,0.87,0.83,0.90,per 400g/day,Probable,WCRF/AICR 2018
+Calcium supplements,Decreases,0.94,0.92,0.97,per 200mg/day,Probable,WCRF/AICR 2018

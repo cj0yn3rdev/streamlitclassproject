@@ -1,0 +1,28 @@
+country,region,incidence_asr_per_100k,mortality_asr_per_100k,hdi_tier,source
+Hungary,Europe,41.1,18.7,Very high,IARC GLOBOCAN 2022
+Slovakia,Europe,39.3,17.5,Very high,IARC GLOBOCAN 2022
+Norway,Europe,38.5,11.0,Very high,IARC GLOBOCAN 2022
+Netherlands,Europe,37.5,11.7,Very high,IARC GLOBOCAN 2022
+Denmark,Europe,36.9,12.1,Very high,IARC GLOBOCAN 2022
+Slovenia,Europe,35.4,12.5,Very high,IARC GLOBOCAN 2022
+Belgium,Europe,35.0,10.7,Very high,IARC GLOBOCAN 2022
+Australia,Oceania,34.8,9.1,Very high,IARC GLOBOCAN 2022
+New Zealand,Oceania,34.1,11.2,Very high,IARC GLOBOCAN 2022
+South Korea,Asia,33.7,8.6,Very high,IARC GLOBOCAN 2022
+Japan,Asia,32.7,11.5,Very high,IARC GLOBOCAN 2022
+Italy,Europe,30.6,9.6,Very high,IARC GLOBOCAN 2022
+Germany,Europe,29.9,10.3,Very high,IARC GLOBOCAN 2022
+Canada,Americas,29.7,9.3,Very high,IARC GLOBOCAN 2022
+France,Europe,29.5,9.9,Very high,IARC GLOBOCAN 2022
+USA,Americas,26.6,8.5,Very high,IARC GLOBOCAN 2022
+UK,Europe,25.8,9.2,Very high,IARC GLOBOCAN 2022
+China,Asia,23.9,11.2,High,IARC GLOBOCAN 2022
+Russia,Europe,22.7,12.1,High,IARC GLOBOCAN 2022
+Mexico,Americas,16.5,7.3,High,IARC GLOBOCAN 2022
+Brazil,Americas,18.4,8.4,High,IARC GLOBOCAN 2022
+South Africa,Africa,13.7,7.7,Medium,IARC GLOBOCAN 2022
+Egypt,Africa,7.6,4.9,Medium,IARC GLOBOCAN 2022
+India,Asia,5.8,3.4,Medium,IARC GLOBOCAN 2022
+Pakistan,Asia,5.4,3.1,Medium,IARC GLOBOCAN 2022
+Nigeria,Africa,4.4,2.7,Low,IARC GLOBOCAN 2022
+Kenya,Africa,4.1,2.5,Low,IARC GLOBOCAN 2022

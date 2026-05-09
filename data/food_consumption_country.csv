@@ -1,0 +1,28 @@
+country,red_meat_kg_per_capita_yr,processed_meat_kg_per_capita_yr,fiber_g_per_capita_day,fruit_veg_kg_per_capita_yr,source
+Argentina,49.7,11.0,18.5,140,FAO Food Balance Sheets 2020
+USA,37.0,17.0,16.0,200,FAO/USDA ERS 2020
+Australia,38.5,15.0,17.5,180,FAO 2020
+Brazil,33.0,8.0,19.0,150,FAO 2020
+France,35.0,15.0,21.0,180,FAO 2020
+Germany,36.0,31.0,18.0,165,FAO 2020
+Spain,36.0,23.0,20.0,210,FAO 2020
+Italy,30.0,16.0,21.0,205,FAO 2020
+UK,24.0,14.0,18.0,170,FAO 2020
+Hungary,30.0,22.0,16.5,135,FAO 2020
+Netherlands,33.0,21.0,18.0,170,FAO 2020
+Denmark,38.0,22.0,18.5,160,FAO 2020
+Norway,28.0,20.0,17.0,150,FAO 2020
+Slovakia,27.0,18.0,16.0,140,FAO 2020
+South Korea,17.0,7.0,22.0,200,FAO 2020
+Japan,9.0,4.0,17.0,165,FAO 2020
+China,28.0,6.0,20.0,360,FAO 2020
+India,0.5,0.2,28.0,170,FAO 2020
+Pakistan,2.0,0.5,25.0,130,FAO 2020
+Nigeria,6.0,1.0,30.0,110,FAO 2020
+South Africa,21.0,7.0,17.0,135,FAO 2020
+New Zealand,38.0,14.0,18.0,170,FAO 2020
+Canada,33.0,16.0,17.0,175,FAO 2020
+Mexico,20.0,6.0,22.0,170,FAO 2020
+Russia,28.0,15.0,18.0,140,FAO 2020
+Egypt,12.0,2.0,24.0,225,FAO 2020
+Kenya,11.0,1.0,28.0,130,FAO 2020

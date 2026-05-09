@@ -1,0 +1,23 @@
+year,age_group,incidence_rate,mortality_rate,source
+1975,<50,5.9,1.8,SEER 9 / ACS Cancer Statistics
+1980,<50,6.1,1.9,SEER 9 / ACS Cancer Statistics
+1985,<50,6.2,1.9,SEER 9 / ACS Cancer Statistics
+1990,<50,6.7,2.0,SEER 9 / ACS Cancer Statistics
+1995,<50,7.2,2.2,SEER 9 / ACS Cancer Statistics
+2000,<50,8.4,2.5,SEER 9 / ACS Cancer Statistics
+2005,<50,9.7,2.8,SEER 9 / ACS Cancer Statistics
+2010,<50,11.0,3.2,SEER 9 / ACS Cancer Statistics
+2015,<50,12.5,3.8,SEER 9 / ACS Cancer Statistics
+2020,<50,13.9,4.1,SEER 9 / ACS Cancer Statistics
+2023,<50,14.5,4.3,ACS Cancer Statistics 2023
+1975,50+,178.0,72.5,SEER 9 / ACS Cancer Statistics
+1980,50+,180.4,71.8,SEER 9 / ACS Cancer Statistics
+1985,50+,175.2,69.3,SEER 9 / ACS Cancer Statistics
+1990,50+,164.8,65.1,SEER 9 / ACS Cancer Statistics
+1995,50+,145.3,60.4,SEER 9 / ACS Cancer Statistics
+2000,50+,130.1,55.7,SEER 9 / ACS Cancer Statistics
+2005,50+,118.4,50.2,SEER 9 / ACS Cancer Statistics
+2010,50+,104.6,44.8,SEER 9 / ACS Cancer Statistics
+2015,50+,94.7,40.9,SEER 9 / ACS Cancer Statistics
+2020,50+,87.8,37.6,SEER 9 / ACS Cancer Statistics
+2023,50+,84.2,36.4,ACS Cancer Statistics 2023

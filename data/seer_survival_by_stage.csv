@@ -1,0 +1,5 @@
+stage,5_year_survival_rate,description,source
+Localized,91.3,Cancer confined to primary site,SEER 2014-2020
+Regional,75.2,Cancer spread to regional lymph nodes,SEER 2014-2020
+Distant,16.9,Cancer has metastasized,SEER 2014-2020
+All Stages Combined,65.0,Overall 5-year relative survival,SEER 2014-2020
