@@ -1,0 +1,16 @@
+patient_type,stage,share_pct,source
+Inherited syndrome (Lynch / FAP / MUTYH),Localized,55,Stoffel 2020 / Pearlman 2017
+Inherited syndrome (Lynch / FAP / MUTYH),Regional,35,Stoffel 2020 / Pearlman 2017
+Inherited syndrome (Lynch / FAP / MUTYH),Distant (metastatic),10,Stoffel 2020 / Pearlman 2017
+Strong family history (no syndrome found),Localized,35,Cercek 2021 / Stoffel 2020
+Strong family history (no syndrome found),Regional,45,Cercek 2021 / Stoffel 2020
+Strong family history (no syndrome found),Distant (metastatic),20,Cercek 2021 / Stoffel 2020
+Inflammatory bowel disease history,Localized,42,Stoffel 2020
+Inflammatory bowel disease history,Regional,42,Stoffel 2020
+Inflammatory bowel disease history,Distant (metastatic),16,Stoffel 2020
+Lifestyle-driven (obesity / smoking / sedentary),Localized,22,Cercek 2021 / Liu 2019
+Lifestyle-driven (obesity / smoking / sedentary),Regional,46,Cercek 2021 / Liu 2019
+Lifestyle-driven (obesity / smoking / sedentary),Distant (metastatic),32,Cercek 2021 / Liu 2019
+No identifiable risk factor,Localized,20,Cercek 2021
+No identifiable risk factor,Regional,45,Cercek 2021
+No identifiable risk factor,Distant (metastatic),35,Cercek 2021

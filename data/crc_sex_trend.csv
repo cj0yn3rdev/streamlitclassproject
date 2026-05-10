@@ -1,0 +1,23 @@
+year,sex,incidence_rate,mortality_rate,source
+1975,Male,60.5,28.5,SEER 9 Registry
+1980,Male,65.0,28.7,SEER 9 Registry
+1985,Male,67.5,28.3,SEER 9 Registry
+1990,Male,65.0,26.9,SEER 9 Registry
+1995,Male,62.0,25.8,SEER 9 Registry
+2000,Male,60.5,23.7,SEER 9 Registry
+2005,Male,56.5,21.5,SEER 9 Registry
+2010,Male,51.5,19.4,SEER 9 Registry
+2015,Male,47.0,17.5,SEER 9 Registry
+2020,Male,44.0,16.3,SEER 9 Registry
+2023,Male,43.0,15.9,ACS Cancer Statistics 2023
+1975,Female,45.0,20.5,SEER 9 Registry
+1980,Female,47.5,20.6,SEER 9 Registry
+1985,Female,47.0,19.8,SEER 9 Registry
+1990,Female,45.0,18.5,SEER 9 Registry
+1995,Female,43.0,17.0,SEER 9 Registry
+2000,Female,41.5,15.9,SEER 9 Registry
+2005,Female,38.0,14.5,SEER 9 Registry
+2010,Female,36.0,13.4,SEER 9 Registry
+2015,Female,34.5,12.4,SEER 9 Registry
+2020,Female,33.0,11.6,SEER 9 Registry
+2023,Female,32.5,11.4,ACS Cancer Statistics 2023

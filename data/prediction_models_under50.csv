@@ -1,0 +1,8 @@
+model,auc,source
+Random guess (no information),0.50,Baseline
+Family history alone,0.57,Imperiale 2015
+Lifestyle factors only,0.62,Hippisley-Cox QCancer
+Demographics + lifestyle combined,0.68,Hippisley-Cox QCancer
+With colonoscopy / screening history,0.72,Imperiale 2015
+With polygenic risk score (genetics),0.75,Schmit 2019
+Full combined model,0.78,Smith 2022 meta-analysis

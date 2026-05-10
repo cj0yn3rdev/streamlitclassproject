@@ -1,0 +1,13 @@
+risk_factor,risk_level,prevalence_pct,source
+Obesity (BMI >= 30),High,45,NCI Colorectal Cancer Risk Tool / NHANES
+Obesity (BMI >= 30),Medium,32,NCI Colorectal Cancer Risk Tool / NHANES
+Obesity (BMI >= 30),Low,18,NCI Colorectal Cancer Risk Tool / NHANES
+Smoking (current),High,28,CDC BRFSS / NCI
+Smoking (current),Medium,18,CDC BRFSS / NCI
+Smoking (current),Low,8,CDC BRFSS / NCI
+Heavy alcohol use,High,24,NHANES / NCI
+Heavy alcohol use,Medium,14,NHANES / NCI
+Heavy alcohol use,Low,6,NHANES / NCI
+Sedentary lifestyle,High,52,CDC BRFSS / NCI
+Sedentary lifestyle,Medium,38,CDC BRFSS / NCI
+Sedentary lifestyle,Low,22,CDC BRFSS / NCI

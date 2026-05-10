@@ -1,0 +1,15 @@
+risk_factor,age_group,prevalence_pct,source
+Family history of CRC,<50,26,Cercek 2021 / Stoffel 2020
+Family history of CRC,50+,14,Cercek 2021 / Stoffel 2020
+Genetic syndrome (Lynch / FAP),<50,16,Stoffel 2020
+Genetic syndrome (Lynch / FAP),50+,3,Stoffel 2020
+Smoking (current or former),<50,22,Cercek 2021
+Smoking (current or former),50+,38,Cercek 2021
+Obesity (BMI >= 30),<50,32,Liu 2019 / Cercek 2021
+Obesity (BMI >= 30),50+,28,Liu 2019 / Cercek 2021
+Type 2 diabetes,<50,9,Larsson 2005 / Cercek 2021
+Type 2 diabetes,50+,22,Larsson 2005 / Cercek 2021
+Inflammatory bowel disease,<50,6,Stoffel 2020
+Inflammatory bowel disease,50+,3,Stoffel 2020
+Heavy alcohol use,<50,18,Cercek 2021
+Heavy alcohol use,50+,12,Cercek 2021

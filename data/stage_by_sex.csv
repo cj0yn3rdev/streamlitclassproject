@@ -1,0 +1,7 @@
+sex,stage,share_pct,source
+Male,Localized,37,SEER 2014-2020
+Male,Regional,38,SEER 2014-2020
+Male,Distant (metastatic),25,SEER 2014-2020
+Female,Localized,40,SEER 2014-2020
+Female,Regional,38,SEER 2014-2020
+Female,Distant (metastatic),22,SEER 2014-2020

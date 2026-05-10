@@ -1,0 +1,7 @@
+age_group,stage,share_pct,source
+<50,Localized,28,Cercek 2021 / SEER
+<50,Regional,45,Cercek 2021 / SEER
+<50,Distant (metastatic),27,Cercek 2021 / SEER
+50+,Localized,38,SEER 2014-2020
+50+,Regional,45,SEER 2014-2020
+50+,Distant (metastatic),17,SEER 2014-2020
