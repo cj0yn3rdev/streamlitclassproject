@@ -1,0 +1,29 @@
+risk_factor,age_group,sex,prevalence_pct,source
+Family history of CRC,<50,Male,23,Cercek 2021 / Stoffel 2020
+Family history of CRC,<50,Female,28,Cercek 2021 / Stoffel 2020
+Family history of CRC,50+,Male,13,Cercek 2021 / Stoffel 2020
+Family history of CRC,50+,Female,15,Cercek 2021 / Stoffel 2020
+Genetic syndrome (Lynch / FAP),<50,Male,13,Stoffel 2020
+Genetic syndrome (Lynch / FAP),<50,Female,18,Stoffel 2020
+Genetic syndrome (Lynch / FAP),50+,Male,3,Stoffel 2020
+Genetic syndrome (Lynch / FAP),50+,Female,3,Stoffel 2020
+Smoking (current or former),<50,Male,26,Cercek 2021
+Smoking (current or former),<50,Female,18,Cercek 2021
+Smoking (current or former),50+,Male,44,Cercek 2021
+Smoking (current or former),50+,Female,32,Cercek 2021
+Obesity (BMI >= 30),<50,Male,34,Liu 2019 / Cercek 2021
+Obesity (BMI >= 30),<50,Female,30,Liu 2019 / Cercek 2021
+Obesity (BMI >= 30),50+,Male,29,Liu 2019 / Cercek 2021
+Obesity (BMI >= 30),50+,Female,27,Liu 2019 / Cercek 2021
+Type 2 diabetes,<50,Male,11,Larsson 2005 / Cercek 2021
+Type 2 diabetes,<50,Female,7,Larsson 2005 / Cercek 2021
+Type 2 diabetes,50+,Male,24,Larsson 2005 / Cercek 2021
+Type 2 diabetes,50+,Female,20,Larsson 2005 / Cercek 2021
+Inflammatory bowel disease,<50,Male,5,Stoffel 2020
+Inflammatory bowel disease,<50,Female,7,Stoffel 2020
+Inflammatory bowel disease,50+,Male,3,Stoffel 2020
+Inflammatory bowel disease,50+,Female,3,Stoffel 2020
+Heavy alcohol use,<50,Male,26,Cercek 2021
+Heavy alcohol use,<50,Female,10,Cercek 2021
+Heavy alcohol use,50+,Male,17,Cercek 2021
+Heavy alcohol use,50+,Female,7,Cercek 2021

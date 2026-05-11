@@ -1,0 +1,52 @@
+state,state_code,crc_rate_male,crc_rate_female
+Alabama,AL,39.01,27.75
+Alaska,AK,33.43,24.41
+Arizona,AZ,29.9,22.93
+Arkansas,AR,41.21,30.43
+California,CA,31.66,25.23
+Colorado,CO,28.11,24.07
+Connecticut,CT,28.78,24.71
+Delaware,DE,33.67,25.11
+District of Columbia,DC,35.92,33.93
+Florida,FL,32.94,24.71
+Georgia,GA,34.67,25.26
+Hawaii,HI,33.46,21.66
+Idaho,ID,29.99,24.15
+Illinois,IL,38.52,30.21
+Indiana,IN,37.83,29.25
+Iowa,IA,37.77,32.12
+Kansas,KS,36.12,28.3
+Kentucky,KY,40.27,31.04
+Louisiana,LA,41.95,30.09
+Maine,ME,33.84,27.26
+Maryland,MD,35.55,26.48
+Massachusetts,MA,32.87,27.29
+Michigan,MI,34.95,27.66
+Minnesota,MN,31.49,26.15
+Mississippi,MS,43.04,31.92
+Missouri,MO,38.04,28.92
+Montana,MT,29.93,25.08
+Nebraska,NE,37.72,31.5
+Nevada,NV,36.78,27.36
+New Hampshire,NH,29.81,27.03
+New Jersey,NJ,37.65,29.99
+New Mexico,NM,33.44,24.48
+New York,NY,34.55,27.73
+North Carolina,NC,33.06,24.52
+North Dakota,ND,38.13,29.05
+Ohio,OH,39.84,30.02
+Oklahoma,OK,39.8,28.44
+Oregon,OR,33.38,27.44
+Pennsylvania,PA,38.76,30.96
+Rhode Island,RI,34.3,29.15
+South Carolina,SC,34.88,26.1
+South Dakota,SD,36.47,30.4
+Tennessee,TN,38.76,29.16
+Texas,TX,34.91,24.74
+Utah,UT,25.11,19.81
+Vermont,VT,30.84,28.1
+Virginia,VA,32.62,26.13
+Washington,WA,30.62,25.48
+West Virginia,WV,43.1,31.93
+Wisconsin,WI,33.15,27.04
+Wyoming,WY,34.39,24.38

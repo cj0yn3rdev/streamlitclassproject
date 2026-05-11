@@ -102,6 +102,10 @@ def load_risk_by_age():
     return pd.read_csv(os.path.join(DATA_DIR, "risk_factors_by_age_group.csv"))
 
 @st.cache_data
+def load_risk_by_age_sex():
+    return pd.read_csv(os.path.join(DATA_DIR, "risk_factors_by_age_sex.csv"))
+
+@st.cache_data
 def load_risk_by_level():
     return pd.read_csv(os.path.join(DATA_DIR, "crc_risk_factors_by_level.csv"))
 
@@ -124,6 +128,10 @@ def load_early_onset_share():
 @st.cache_data
 def load_stage_by_sex():
     return pd.read_csv(os.path.join(DATA_DIR, "stage_by_sex.csv"))
+
+@st.cache_data
+def load_state_rates_by_sex():
+    return pd.read_csv(os.path.join(DATA_DIR, "state_crc_rates_by_sex.csv"))
 
 # Region & abbreviation maps
 STATE_TO_REGION = {
@@ -175,12 +183,14 @@ cancer_totals_df = load_cancer_totals()
 obesity_df = load_obesity()
 us_diet_df = load_us_diet_trends()
 risk_by_age_df = load_risk_by_age()
+risk_by_age_sex_df = load_risk_by_age_sex()
 risk_by_level_df = load_risk_by_level()
 under50_subgroups_df = load_under50_subgroups()
 prediction_models_df = load_prediction_models()
 stage_by_age_df = load_stage_by_age()
 early_onset_share_df = load_early_onset_share()
 stage_by_sex_df = load_stage_by_sex()
+state_rates_by_sex_df = load_state_rates_by_sex()
 
 # Augment + normalize
 state_counts_df['region'] = state_counts_df['state'].map(STATE_TO_REGION)
@@ -225,7 +235,16 @@ filtered = state_counts_df[
 ]
 if selected_region != 'All':
     filtered = filtered[filtered['region'] == selected_region]
+
+# State-level data only has combined-sex rows — always use aggregate for state charts
 all_sex = filtered[filtered['sex'].isin(['All', 'Both'])]
+
+if selected_sex != 'Both':
+    st.sidebar.info(
+        f"ℹ️ The CDC state-level dataset doesn't include separate {selected_sex.lower()} "
+        "breakdowns by state. State charts show combined data. "
+        "The **Men vs women** trend chart above reflects your selection."
+    )
 
 value_col = 'rate_per_100k' if display_mode == 'Rate per 100K' else 'value'
 value_label = 'Rate per 100K' if display_mode == 'Rate per 100K' else 'Count'
@@ -533,11 +552,18 @@ with r4_left:
         "Darker red = more common. Watch how Mississippi, Kentucky, and West Virginia stand out."
     )
 
+    if selected_sex == 'Male':
+        map_df = state_rates_by_sex_df[['state', 'state_code', 'crc_rate_male']].rename(columns={'crc_rate_male': 'crc_rate'})
+    elif selected_sex == 'Female':
+        map_df = state_rates_by_sex_df[['state', 'state_code', 'crc_rate_female']].rename(columns={'crc_rate_female': 'crc_rate'})
+    else:
+        map_df = state_rates_df[['state', 'state_code', 'crc_rate_total']].rename(columns={'crc_rate_total': 'crc_rate'})
+
     fig = px.choropleth(
-        state_rates_df, locations='state_code', locationmode='USA-states',
-        color='crc_rate_total', scope='usa', hover_name='state',
+        map_df, locations='state_code', locationmode='USA-states',
+        color='crc_rate', scope='usa', hover_name='state',
         color_continuous_scale='Reds', template='simple_white',
-        labels={'crc_rate_total': 'CRC per 100K'},
+        labels={'crc_rate': 'CRC per 100K'},
     )
     fig.update_layout(height=315, margin=dict(l=10, r=10, t=28, b=10),
                       paper_bgcolor='#fff', plot_bgcolor='#fff',
@@ -701,19 +727,30 @@ with r6_right:
         "older patients more often have smoking history and diabetes."
     )
 
+    if selected_sex == 'Both':
+        risk_age_plot = risk_by_age_df
+        color_col = 'age_group'
+        color_map = {'<50': '#f59e0b', '50+': '#3b82f6'}
+        legend_title = 'Age group'
+    else:
+        risk_age_plot = risk_by_age_sex_df[risk_by_age_sex_df['sex'] == selected_sex]
+        color_col = 'age_group'
+        color_map = {'<50': '#f59e0b', '50+': '#3b82f6'}
+        legend_title = f'Age group ({selected_sex})'
+
     fig = px.bar(
-        risk_by_age_df,
+        risk_age_plot,
         x='risk_factor', y='prevalence_pct',
-        color='age_group', barmode='group',
+        color=color_col, barmode='group',
         template='simple_white',
         text='prevalence_pct',
-        color_discrete_map={'<50': '#f59e0b', '50+': '#3b82f6'},
+        color_discrete_map=color_map,
         labels={'risk_factor': '', 'prevalence_pct': 'Share of patients (%)',
                 'age_group': 'Age group'},
     )
     fig.update_traces(texttemplate='%{text}%', textposition='outside')
     fig.update_layout(height=420, margin=dict(l=10, r=10, t=28, b=10),
-                      legend_title_text='Age group',
+                      legend_title_text=legend_title,
                       paper_bgcolor='#fff', plot_bgcolor='#fff',
                       xaxis_tickangle=-30)
     fig.update_yaxes(gridcolor='#e5e7eb')
@@ -872,8 +909,10 @@ st.caption(
     "women), partly because men are also less likely to keep up with screening."
 )
 
+stage_by_sex_plot = stage_by_sex_df if selected_sex == 'Both' else stage_by_sex_df[stage_by_sex_df['sex'] == selected_sex]
+
 fig = px.bar(
-    stage_by_sex_df,
+    stage_by_sex_plot,
     x='sex', y='share_pct',
     color='stage', barmode='stack',
     template='simple_white',
