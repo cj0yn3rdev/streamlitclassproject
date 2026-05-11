@@ -1003,6 +1003,32 @@ links_df = pd.DataFrame(
 st.dataframe(links_df, use_container_width=True, hide_index=True,
              column_config={"URL": st.column_config.LinkColumn("URL")})
 
+# ── data snapshots ───────────────────────────────────────────────────────────
+st.subheader("Data snapshots")
+st.caption("Each dataset used in this dashboard — expand any row to see the first few records.")
+
+_snapshots = [
+    ("colorectal_only_combined.csv", state_counts_df),
+    ("state_crc_rates_real.csv",     state_rates_df),
+    ("globocan_2022_crc.csv",         globocan_df),
+    ("historical_crc_trends.csv",     historical_df),
+    ("crc_sex_trend.csv",             sex_trend_df),
+    ("seer_survival_by_stage.csv",    seer_df),
+    ("food_consumption_country.csv",  food_country_df),
+    ("crc_risk_factors_real.csv",     risk_real_df),
+    ("risk_factors_by_age_group.csv", risk_by_age_df),
+    ("crc_risk_factors_by_level.csv", risk_by_level_df),
+    ("under50_subgroups.csv",         under50_subgroups_df),
+    ("stage_at_diagnosis_by_age.csv", stage_by_age_df),
+    ("early_onset_share.csv",         early_onset_share_df),
+    ("stage_by_sex.csv",              stage_by_sex_df),
+]
+
+for _fname, _df in _snapshots:
+    _rows, _cols = _df.shape
+    with st.expander(f"{_fname}  —  {_rows:,} rows × {_cols} columns"):
+        st.dataframe(_df.head(), use_container_width=True, hide_index=True)
+
 st.markdown("---")
 st.caption(
     "Dashboard created for DSC 205 Final Project · "
